@@ -8,6 +8,7 @@
   if (!root) { return; }
   var $ = function (sel) { return root.querySelector(sel); };
   var LANG = root.dataset.lang === 'en' ? 'en' : 'ko'; // saju_widget_en.html / saju_widget_ko.html이 data-lang으로 지정
+  var IMG_BASE = 'https://stjandljh1-creator.github.io/saju-calculator/images/web/'; // Today's Fortune 카드 아이콘/배경 이미지 경로
 
   // ---- 천간/지지/오행/음양 변환 테이블 ----
   var GAN_INFO = {
@@ -661,9 +662,9 @@
     TODAY_CATEGORIES.forEach(function (cat) {
       var godText = TODAY_GOD_TEXT[cat.key][god];
       var stageText = TODAY_STAGE_TEXT[cat.key][stage];
-      var bgStyle = "background-image:linear-gradient(rgba(8,8,8,.5),rgba(8,8,8,.5)),url('images/web/" + cat.bg + "')";
+      var bgStyle = "background-image:linear-gradient(rgba(8,8,8,.5),rgba(8,8,8,.5)),url('" + IMG_BASE + cat.bg + "')";
       html += '<div class="scw-today-cat" style="' + bgStyle + '">' +
-        '<div class="scw-today-cat-label"><img class="scw-cat-icon" src="images/web/' + cat.icon + '" alt="' + cat.en + '" loading="lazy"><span class="scw-tcl-en">' + cat.en + '</span><span class="scw-tcl-ko">' + cat.ko + '</span></div>' +
+        '<div class="scw-today-cat-label"><img class="scw-cat-icon" src="' + IMG_BASE + cat.icon + '" alt="' + cat.en + '" loading="lazy"><span class="scw-tcl-en">' + cat.en + '</span><span class="scw-tcl-ko">' + cat.ko + '</span></div>' +
         '<div class="scw-today-cat-text"><span class="scw-en">' + godText.en + ' ' + stageText.en + '</span>' +
         '<span class="scw-ko">' + godText.ko + ' ' + stageText.ko + '</span></div>' +
         '</div>';
