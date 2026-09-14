@@ -9,6 +9,7 @@
   var $ = function (sel) { return root.querySelector(sel); };
   var LANG = root.dataset.lang === 'en' ? 'en' : 'ko'; // saju_widget_en.html / saju_widget_ko.html이 data-lang으로 지정
   var IMG_BASE = 'https://stjandljh1-creator.github.io/saju-calculator/images/web/'; // Today's Fortune 카드 아이콘/배경 이미지 경로
+  var TRAD_IMG_BASE = 'https://stjandljh1-creator.github.io/saju-calculator/images/web/traditional/'; // 8개 리포트 카드 아이콘(traditional 테마) 경로. Today's Fortune(IMG_BASE)와 분리 - traditional 세트엔 bg_*.png 대응 이미지가 없어서 공유하면 그쪽이 깨짐
 
   // ---- 천간/지지/오행/음양 변환 테이블 ----
   var GAN_INFO = {
@@ -677,14 +678,14 @@
   // 원국(연월일시 60갑자, 오행, 십신, 십이운성, 신강신약)은 이미 위에서 계산 완료.
   // 카테고리별로 어떤 십신 조합에 가중치를 둘지만 다르게 해서 문장을 생성한다.
   var CATEGORY_MENU = [
-    { key: 'wealth', emoji: '💰', en: 'Wealth', ko: '재물운' },
-    { key: 'love', emoji: '❤️', en: 'Love', ko: '애정운' },
-    { key: 'marriage', emoji: '💍', en: 'Marriage', ko: '결혼운' },
-    { key: 'career', emoji: '💼', en: 'Career', ko: '직업운' },
-    { key: 'business', emoji: '📈', en: 'Business', ko: '사업운' },
-    { key: 'friends', emoji: '🤝', en: 'Friends', ko: '친구운' },
-    { key: 'health', emoji: '🩺', en: 'Health', ko: '건강운' },
-    { key: 'life', emoji: '🔮', en: 'Lifetime', ko: '평생운세' }
+    { key: 'wealth', emoji: '💰', icon: 'icon_wealth_bright.png', en: 'Wealth', ko: '재물운' },
+    { key: 'love', emoji: '❤️', icon: 'icon_love_bright.png', en: 'Love', ko: '애정운' },
+    { key: 'marriage', emoji: '💍', icon: 'icon_love_bright.png', en: 'Marriage', ko: '결혼운' },
+    { key: 'career', emoji: '💼', icon: 'icon_career_bright.png', en: 'Career', ko: '직업운' },
+    { key: 'business', emoji: '📈', icon: 'icon_wealth_bright.png', en: 'Business', ko: '사업운' },
+    { key: 'friends', emoji: '🤝', icon: 'icon_relationship_bright.png', en: 'Friends', ko: '친구운' },
+    { key: 'health', emoji: '🩺', icon: 'icon_health_bright.png', en: 'Health', ko: '건강운' },
+    { key: 'life', emoji: '🔮', icon: 'hero_bright.png', en: 'Lifetime', ko: '평생운세' }
   ];
 
   var currentCtx = null; // 최초 1회 계산된 원국 데이터. 카테고리 전환 시 재입력 없이 재사용.
@@ -1549,7 +1550,7 @@
     var btn = document.createElement('button');
     btn.type = 'button';
     btn.className = 'scw-category-card';
-    btn.innerHTML = '<span class="scw-cat-emoji">' + cat.emoji + '</span>' +
+    btn.innerHTML = '<img class="scw-cat-icon-card" src="' + TRAD_IMG_BASE + cat.icon + '" alt="' + cat.en + '" loading="lazy">' +
       '<span class="scw-cat-en">' + cat.en + '</span>' +
       '<span class="scw-cat-ko">' + cat.ko + '</span>';
     btn.addEventListener('click', function () { showReport(cat.key, btn); });
