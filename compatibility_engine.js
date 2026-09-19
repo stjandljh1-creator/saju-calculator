@@ -16,6 +16,10 @@
   var COMPAT_TEXT_URL = window.COMPAT_TEXT_URL_OVERRIDE ||
     'https://stjandljh1-creator.github.io/saju-calculator/compatibility_report_texts.json';
 
+  // saju_engine.js의 TRAD_IMG_BASE(8개 리포트 카드 아이콘)와 동일한 traditional 테마 이미지 경로
+  var IMG_BASE = window.COMPAT_IMG_BASE_OVERRIDE ||
+    'https://stjandljh1-creator.github.io/saju-calculator/images/web/traditional/';
+
   // ---- 천간/지지 -> 오행 (saju_engine.js GAN_INFO/ZHI_INFO와 동일한 값의 축약 복제본) ----
   var GAN_ELEMENT = {
     '甲': '목', '乙': '목', '丙': '화', '丁': '화', '戊': '토',
@@ -386,7 +390,8 @@
   // ================= DOM 삽입 (기존 위젯 HTML은 건드리지 않고 JS로 섹션을 붙인다) =================
   var style = document.createElement('style');
   style.textContent =
-    '.saju-calc-widget .scw-compat-toggle { margin-top: 22px; width: 100%; }' +
+    '.saju-calc-widget .scw-compat-toggle { margin-top: 22px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px; }' +
+    '.saju-calc-widget .scw-compat-icon { width: 32px; height: 32px; flex: none; opacity: .92; }' +
     '.saju-calc-widget .scw-compat-panel { margin-top: 18px; border: 1px solid var(--scw-border); border-radius: 2px; padding: 18px 16px; }' +
     '.saju-calc-widget .scw-compat-person { border-top: 1px solid var(--scw-border); padding-top: 14px; margin-top: 14px; }' +
     '.saju-calc-widget .scw-compat-person:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }' +
@@ -399,7 +404,10 @@
   var section = document.createElement('div');
   section.className = 'scw-compat-section';
   section.innerHTML =
-    '<button type="button" class="scw-submit scw-compat-toggle" id="scw-compat-toggle"><span class="scw-en">Compatibility</span><span class="scw-ko"> · 궁합 보기</span></button>' +
+    '<button type="button" class="scw-submit scw-compat-toggle" id="scw-compat-toggle">' +
+      '<img class="scw-compat-icon" src="' + IMG_BASE + 'compat_icon.png" alt="Mandarin ducks symbolizing couple compatibility in Korean tradition" loading="lazy">' +
+      '<span class="scw-en">Compatibility</span><span class="scw-ko"> · 궁합 보기</span>' +
+    '</button>' +
     '<div class="scw-compat-panel" id="scw-compat-panel" style="display:none;">' +
       '<h3><span class="scw-h-en">Compatibility</span><span class="scw-h-ko">궁합 보기</span></h3>' +
       personFormHtml('a', '첫 번째 사람', 'Person A') +
