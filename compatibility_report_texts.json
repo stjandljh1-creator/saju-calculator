@@ -1,9 +1,23 @@
 {
-  "_readme": "궁합 리포트 카피 플레이스홀더. en/ko 텍스트만 교체하면 코드 수정 없이 바로 반영됩니다. {{score}}/{{grade}}는 코드에서 자동으로 채워지는 값이니 그대로 두세요.",
+  "_readme": "궁합 리포트 카피. overview_by_grade/daystem_point_by_relation은 등급(A/B/C/D)·일간관계(sangsaeng/sanggeuk/same)별로 다른 문구가 나가도록 compatibility_engine.js의 renderReport()가 조회하는 구조입니다. liuhe_bonus는 일지 육합이 있을 때만 추가로 붙습니다. en/ko 텍스트만 교체하면 코드 수정 없이 바로 반영됩니다. {{score}}/{{grade}}는 코드에서 자동으로 채워지는 값이니 그대로 두세요.",
 
-  "overview_placeholder": {
-    "en": "[one-line summary placeholder]",
-    "ko": "[한줄요약 자리]"
+  "overview_by_grade": {
+    "A": {
+      "en": "A strong match — your Day Masters support each other's growth, and the energy between you flows easily. The work here isn't compatibility, it's not taking it for granted.",
+      "ko": "[한줄요약 자리 - A등급]"
+    },
+    "B": {
+      "en": "A solid match with real chemistry, but not effortless — you complement each other in some areas and pull in different directions in others. Worth building on.",
+      "ko": "[한줄요약 자리 - B등급]"
+    },
+    "C": {
+      "en": "A mixed match — there's genuine attraction, but the elemental balance creates friction points you'll both need to name and work through deliberately.",
+      "ko": "[한줄요약 자리 - C등급]"
+    },
+    "D": {
+      "en": "A challenging match on paper — your charts clash more than they align. This doesn't mean the relationship can't work, but it will take more conscious effort than most.",
+      "ko": "[한줄요약 자리 - D등급]"
+    }
   },
 
   "wuxing_point_placeholder": {
@@ -11,28 +25,43 @@
     "ko": "[오행 상생상극 해석 자리]"
   },
 
-  "daystem_point_placeholder": {
-    "en": "[Day-stem relationship interpretation placeholder]",
-    "ko": "[일간 관계 해석 자리]"
+  "daystem_point_by_relation": {
+    "sangsaeng": {
+      "en": "One of you naturally feeds the other's energy — like wood feeding fire. This usually shows up as one partner instinctively supporting or inspiring the other's growth.",
+      "ko": "[일간 관계 해석 자리 - 상생]"
+    },
+    "sanggeuk": {
+      "en": "One of you naturally checks the other's energy — like wood breaking through earth. This creates real tension, but controlled tension can also produce growth neither of you would reach alone.",
+      "ko": "[일간 관계 해석 자리 - 상극]"
+    },
+    "same": {
+      "en": "You share the same core element. That means you understand each other quickly, but you may also mirror each other's blind spots rather than balancing them out.",
+      "ko": "[일간 관계 해석 자리 - 비화]"
+    }
+  },
+
+  "liuhe_bonus": {
+    "en": "Your Day Branches form a Six Harmony — a classical sign of easy, comfortable chemistry that tends to show up immediately rather than growing slowly.",
+    "ko": "[육합 보너스 문구 자리]"
   },
 
   "relationship_boost": {
     "lover": {
-      "en": "[placeholder for romantic partners]",
+      "en": "Use this reading as a conversation starter, not a verdict. Whatever friction points show up above, name them directly with your partner rather than assuming they'll resolve on their own.",
       "ko": "[연인용 자리]"
     },
     "friend": {
-      "en": "[placeholder for friends]",
-      "ko": "[친구용 자리]"
+      "en": "Use this reading as a conversation starter, not a verdict. Whatever friction points show up above, name them directly with your partner rather than assuming they'll resolve on their own.",
+      "ko": "[친구용 자리 - 추후 별도 문구 예정]"
     },
     "business": {
-      "en": "[placeholder for business partners]",
-      "ko": "[사업파트너용 자리]"
+      "en": "Use this reading as a conversation starter, not a verdict. Whatever friction points show up above, name them directly with your partner rather than assuming they'll resolve on their own.",
+      "ko": "[사업파트너용 자리 - 추후 별도 문구 예정]"
     }
   },
 
   "disclaimer": {
     "en": "This analysis is for entertainment purposes only and should not replace professional relationship counseling.",
-    "ko": "This analysis is for entertainment purposes only and should not replace professional relationship counseling."
+    "ko": "본 분석은 오락 목적으로 제공되며, 전문 상담을 대체하지 않습니다."
   }
 }

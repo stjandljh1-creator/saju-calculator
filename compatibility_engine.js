@@ -52,10 +52,19 @@
   var LIUHE_NO_TRANSFORM = { '午未': true, '未午': true }; // 오미는 새 오행으로 변환되지 않고 화 기운만 강화
 
   var RELATIONSHIP_TYPES = [
-    { key: 'lover', en: 'Romantic / Married', ko: '연인/부부' },
-    { key: 'friend', en: 'Friends', ko: '친구' },
-    { key: 'business', en: 'Business Partners', ko: '사업 파트너' }
+    { key: 'lover', en: 'Romantic Partner', ko: '연인/부부' },
+    { key: 'friend', en: 'Friend', ko: '친구' },
+    { key: 'business', en: 'Business Partner', ko: '사업 파트너' }
   ];
+
+  // 궁합 입력 폼(personFormHtml)·제출 버튼에서 쓰는 언어별 UI 문구
+  var COMPAT_UI = LANG === 'en' ? {
+    solar: 'Solar Calendar', lunar: 'Lunar Calendar',
+    birthplace: 'Birth City', submit: 'Calculate Compatibility'
+  } : {
+    solar: '양력', lunar: '음력',
+    birthplace: '출생지', submit: '궁합 계산하기'
+  };
 
   // v1 등급 컷오프 — 균등 배분 스코어링에서 시작한 초기값, 추후 실제 사례로 조정 예정
   var GRADE_THRESHOLDS = [
@@ -178,8 +187,8 @@
       '<div class="scw-compat-person">' +
         '<div class="scw-field-label"><span class="scw-en">' + labelEn + '</span><span class="scw-ko"> · ' + labelKo + '</span></div>' +
         '<div class="scw-row">' +
-          '<label><input type="radio" name="scw-compat-' + id + '-caltype" value="solar" checked> 양력</label>' +
-          '<label><input type="radio" name="scw-compat-' + id + '-caltype" value="lunar"> 음력</label>' +
+          '<label><input type="radio" name="scw-compat-' + id + '-caltype" value="solar" checked> ' + COMPAT_UI.solar + '</label>' +
+          '<label><input type="radio" name="scw-compat-' + id + '-caltype" value="lunar"> ' + COMPAT_UI.lunar + '</label>' +
           '<label id="scw-compat-' + id + '-leap-wrap" style="display:none;"><input type="checkbox" id="scw-compat-' + id + '-leap"> 윤달</label>' +
         '</div>' +
         '<div class="scw-row">' +
@@ -192,7 +201,7 @@
           '<label><input type="checkbox" id="scw-compat-' + id + '-hour-unknown"> 시간 모름</label>' +
         '</div>' +
         '<div class="scw-row">' +
-          '<label for="scw-compat-' + id + '-place">출생지</label>' +
+          '<label for="scw-compat-' + id + '-place">' + COMPAT_UI.birthplace + '</label>' +
           '<input type="text" id="scw-compat-' + id + '-place" class="scw-compat-place" placeholder="예: 서울">' +
         '</div>' +
       '</div>'
@@ -298,19 +307,27 @@
   }
 
   function renderReport(result, relType, texts) {
+    var overviewText = texts.overview_by_grade[result.grade];
     var summaryLine = {
-      en: result.score + ' points, Grade ' + result.grade + ' — ' + texts.overview_placeholder.en,
-      ko: result.score + '점, ' + result.grade + '등급 — ' + texts.overview_placeholder.ko
+      en: result.score + ' points, Grade ' + result.grade + ' — ' + overviewText.en,
+      ko: result.score + '점, ' + result.grade + '등급 — ' + overviewText.ko
     };
+
+    var daystemText = texts.daystem_point_by_relation[result.reasons.dayStem.relation];
 
     var overview = [summaryLine];
     var point = [
       { en: texts.wuxing_point_placeholder.en, ko: texts.wuxing_point_placeholder.ko },
       { en: '(basis) ' + balanceBasisKo(result.reasons.balance), ko: '(계산 근거) ' + balanceBasisKo(result.reasons.balance) },
-      { en: '(basis) ' + zhiHapBasisKo(result.reasons.zhiHap), ko: '(계산 근거) ' + zhiHapBasisKo(result.reasons.zhiHap) },
-      { en: texts.daystem_point_placeholder.en, ko: texts.daystem_point_placeholder.ko },
-      { en: '(basis) ' + dayStemBasisKo(result.reasons.dayStem), ko: '(계산 근거) ' + dayStemBasisKo(result.reasons.dayStem) }
+      { en: '(basis) ' + zhiHapBasisKo(result.reasons.zhiHap), ko: '(계산 근거) ' + zhiHapBasisKo(result.reasons.zhiHap) }
     ];
+    if (result.reasons.zhiHap.matched) {
+      point.push({ en: texts.liuhe_bonus.en, ko: texts.liuhe_bonus.ko });
+    }
+    point.push(
+      { en: daystemText.en, ko: daystemText.ko },
+      { en: '(basis) ' + dayStemBasisKo(result.reasons.dayStem), ko: '(계산 근거) ' + dayStemBasisKo(result.reasons.dayStem) }
+    );
     var boost = [texts.relationship_boost[relType]];
 
     return sectionHtml('Overview', '총운풀이', overview) +
@@ -348,10 +365,10 @@
       '<div class="scw-row scw-compat-reltype-row">' +
         '<label for="scw-compat-reltype">관계 유형</label>' +
         '<select id="scw-compat-reltype">' +
-        RELATIONSHIP_TYPES.map(function (r) { return '<option value="' + r.key + '">' + r.ko + '</option>'; }).join('') +
+        RELATIONSHIP_TYPES.map(function (r) { return '<option value="' + r.key + '">' + r[LANG] + '</option>'; }).join('') +
         '</select>' +
       '</div>' +
-      '<div class="scw-row"><button type="button" class="scw-submit" id="scw-compat-submit">궁합 계산하기</button></div>' +
+      '<div class="scw-row"><button type="button" class="scw-submit" id="scw-compat-submit">' + COMPAT_UI.submit + '</button></div>' +
       '<div class="scw-error" id="scw-compat-error"></div>' +
       '<div class="scw-compat-result" id="scw-compat-result" style="display:none;">' +
         '<div class="scw-compat-score" id="scw-compat-score"></div>' +
