@@ -1,0 +1,38 @@
+{
+  "_readme": "궁합 리포트 카피 플레이스홀더. en/ko 텍스트만 교체하면 코드 수정 없이 바로 반영됩니다. {{score}}/{{grade}}는 코드에서 자동으로 채워지는 값이니 그대로 두세요.",
+
+  "overview_placeholder": {
+    "en": "[one-line summary placeholder]",
+    "ko": "[한줄요약 자리]"
+  },
+
+  "wuxing_point_placeholder": {
+    "en": "[Five-element generation/control interpretation placeholder]",
+    "ko": "[오행 상생상극 해석 자리]"
+  },
+
+  "daystem_point_placeholder": {
+    "en": "[Day-stem relationship interpretation placeholder]",
+    "ko": "[일간 관계 해석 자리]"
+  },
+
+  "relationship_boost": {
+    "lover": {
+      "en": "[placeholder for romantic partners]",
+      "ko": "[연인용 자리]"
+    },
+    "friend": {
+      "en": "[placeholder for friends]",
+      "ko": "[친구용 자리]"
+    },
+    "business": {
+      "en": "[placeholder for business partners]",
+      "ko": "[사업파트너용 자리]"
+    }
+  },
+
+  "disclaimer": {
+    "en": "This analysis is for entertainment purposes only and should not replace professional relationship counseling.",
+    "ko": "This analysis is for entertainment purposes only and should not replace professional relationship counseling."
+  }
+}
