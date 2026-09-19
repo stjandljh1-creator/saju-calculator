@@ -1,5 +1,5 @@
 {
-  "_readme": "궁합 리포트 카피. overview_by_grade/daystem_point_by_relation은 등급(A/B/C/D)·일간관계(sangsaeng/sanggeuk/same)별로 다른 문구가 나가도록 compatibility_engine.js의 renderReport()가 조회하는 구조입니다. liuhe_bonus는 일지 육합이 있을 때만 추가로 붙습니다. en/ko 텍스트만 교체하면 코드 수정 없이 바로 반영됩니다. {{score}}/{{grade}}는 코드에서 자동으로 채워지는 값이니 그대로 두세요.",
+  "_readme": "궁합 리포트 카피. overview_by_grade/daystem_point_by_relation은 등급(A/B/C/D)·일간관계(sangsaeng/sanggeuk/same)별로 다른 문구가 나가도록 compatibility_engine.js의 renderReport()가 조회하는 구조입니다. wuxing_point_by_element(목/화/토/금/수)는 부족한 오행마다 문구를 이어붙여서 조합됩니다(부족 오행 없으면 wuxing_point_placeholder가 대신 쓰입니다). liuhe_bonus는 일지 육합이 있을 때만 추가로 붙습니다. en/ko 텍스트만 교체하면 코드 수정 없이 바로 반영됩니다. {{score}}/{{grade}}는 코드에서 자동으로 채워지는 값이니 그대로 두세요.",
 
   "overview_by_grade": {
     "A": {
@@ -25,6 +25,29 @@
     "ko": "[오행 상생상극 해석 자리]"
   },
 
+  "wuxing_point_by_element": {
+    "목": {
+      "en": "Your chart runs a little short on Wood — the energy of growth and initiative. You may find it easier to maintain than to start; your partner's energy can help push new things forward.",
+      "ko": "[오행 부족 문구 자리 - 목]"
+    },
+    "화": {
+      "en": "Your chart runs a little short on Fire — the energy of expression and passion. You may hold feelings in rather than voice them; your partner's warmth can help draw them out.",
+      "ko": "[오행 부족 문구 자리 - 화]"
+    },
+    "토": {
+      "en": "Your chart runs a little short on Earth — the energy of stability and trust-building. You may crave more grounding in the relationship than you're getting; your partner's steadiness can help.",
+      "ko": "[오행 부족 문구 자리 - 토]"
+    },
+    "금": {
+      "en": "Your chart runs a little short on Metal — the energy of clarity and boundaries. You may avoid hard conversations; your partner's directness can help you both stay honest.",
+      "ko": "[오행 부족 문구 자리 - 금]"
+    },
+    "수": {
+      "en": "Your chart runs a little short on Water — the energy of adaptability and depth. You may resist change more than you realize; your partner's flexibility can help you loosen up.",
+      "ko": "[오행 부족 문구 자리 - 수]"
+    }
+  },
+
   "daystem_point_by_relation": {
     "sangsaeng": {
       "en": "One of you naturally feeds the other's energy — like wood feeding fire. This usually shows up as one partner instinctively supporting or inspiring the other's growth.",
@@ -48,15 +71,15 @@
   "relationship_boost": {
     "lover": {
       "en": "Use this reading as a conversation starter, not a verdict. Whatever friction points show up above, name them directly with your partner rather than assuming they'll resolve on their own.",
-      "ko": "[연인용 자리]"
+      "ko": "이 리포트를 결론이 아니라 대화의 시작으로 사용하세요. 위에서 드러난 마찰 지점이 무엇이든, 저절로 풀리길 기다리기보다 파트너와 직접 이름 붙여 이야기하세요."
     },
     "friend": {
-      "en": "Use this reading as a conversation starter, not a verdict. Whatever friction points show up above, name them directly with your partner rather than assuming they'll resolve on their own.",
-      "ko": "[친구용 자리 - 추후 별도 문구 예정]"
+      "en": "Compatibility between friends shows up less in grand gestures and more in whether your energy matches day to day. Use this reading to understand why time together feels easy or effortful — not as a reason to end the friendship.",
+      "ko": "친구 사이의 궁합은 큰 사건보다 일상에서 함께 있을 때 에너지가 맞는지로 드러납니다. 이 리포트를 관계를 끊을 이유가 아니라, 왜 함께 있을 때 편하거나 힘든지 이해하는 도구로 써보세요."
     },
     "business": {
-      "en": "Use this reading as a conversation starter, not a verdict. Whatever friction points show up above, name them directly with your partner rather than assuming they'll resolve on their own.",
-      "ko": "[사업파트너용 자리 - 추후 별도 문구 예정]"
+      "en": "In a business relationship, friction points matter more than chemistry — they predict where decisions will stall. Use this reading to set clear roles upfront in the areas where your energy clashes, rather than hoping it works itself out.",
+      "ko": "사업 관계에서는 케미보다 마찰 지점이 더 중요합니다 — 어디서 의사결정이 막힐지를 미리 보여주기 때문입니다. 저절로 해결되길 바라기보다, 에너지가 부딪히는 영역에서 역할을 미리 명확히 정해두는 데 이 리포트를 활용하세요."
     }
   },
 

@@ -60,10 +60,12 @@
   // 궁합 입력 폼(personFormHtml)·제출 버튼에서 쓰는 언어별 UI 문구
   var COMPAT_UI = LANG === 'en' ? {
     solar: 'Solar Calendar', lunar: 'Lunar Calendar',
-    birthplace: 'Birth City', submit: 'Calculate Compatibility'
+    birthplace: 'Birth City', submit: 'Calculate Compatibility',
+    reltypeLabel: 'Relationship Type'
   } : {
     solar: '양력', lunar: '음력',
-    birthplace: '출생지', submit: '궁합 계산하기'
+    birthplace: '출생지', submit: '궁합 계산하기',
+    reltypeLabel: '관계 유형'
   };
 
   // v1 등급 컷오프 — 균등 배분 스코어링에서 시작한 초기값, 추후 실제 사례로 조정 예정
@@ -139,7 +141,11 @@
       // 5행 순환 구조상 동일오행/상생이 아니면 남는 조합은 전부 상극 관계
       relation = 'sanggeuk'; score = 40;
     }
-    return { relation: relation, score: score, aElement: ea, bElement: eb, aGan: a.dayGanKo, bGan: b.dayGanKo };
+    return {
+      relation: relation, score: score, aElement: ea, bElement: eb,
+      aGan: a.dayGanKo, bGan: b.dayGanKo,
+      aGanHanja: a.dayGan, bGanHanja: b.dayGan
+    };
   }
 
   // ---- 기준 2) 오행 균형 비교: 한쪽이 부족한 오행을 다른 쪽이 채워주는가 ----
@@ -298,6 +304,31 @@
     return parts.join(' / ');
   }
 
+  // ---- (basis) 라인 영문판 — "(basis)" 자동 계산 근거 텍스트도 LANG=en일 때 한글이 섞이지 않도록 ----
+  function zhiHapBasisEn(zhiHap) {
+    if (!zhiHap.matched) {
+      return 'Day Branches ' + zhiHap.aZhi + ' · ' + zhiHap.bZhi + ' — no Six Harmony';
+    }
+    var tail = zhiHap.noTransform
+      ? ' → reinforces ' + ELEMENT_EN[zhiHap.resultElement] + ' energy without transformation'
+      : ' → ' + ELEMENT_EN[zhiHap.resultElement] + ' energy';
+    return 'Day Branches ' + zhiHap.aZhi + '+' + zhiHap.bZhi + ' Six Harmony' + tail;
+  }
+  function dayStemBasisEn(dayStem) {
+    var relLabel = dayStem.relation === 'sangsaeng' ? 'Generating' : dayStem.relation === 'sanggeuk' ? 'Controlling' : 'Same Element (Companion)';
+    return 'Day Master ' + dayStem.aGanHanja + ' (' + ELEMENT_EN[dayStem.aElement] + ') · ' + dayStem.bGanHanja + ' (' + ELEMENT_EN[dayStem.bElement] + ') — ' + relLabel + ' relationship';
+  }
+  function balanceBasisEn(balance) {
+    if (!balance.aLacking.length && !balance.bLacking.length) {
+      return 'Neither of you has an elemental deficiency — a stable pairing that needs little filling in.';
+    }
+    var parts = [];
+    if (balance.aLacking.length) parts.push('A lacks: ' + balance.aLacking.map(function (e) { return ELEMENT_EN[e]; }).join(', '));
+    if (balance.bLacking.length) parts.push('B lacks: ' + balance.bLacking.map(function (e) { return ELEMENT_EN[e]; }).join(', '));
+    parts.push('Mutual fill-in: ' + balance.filled.length + '/' + (balance.aLacking.length + balance.bLacking.length));
+    return parts.join(' / ');
+  }
+
   var compatTextsPromise = null;
   function loadCompatTexts() {
     if (!compatTextsPromise) {
@@ -315,18 +346,29 @@
 
     var daystemText = texts.daystem_point_by_relation[result.reasons.dayStem.relation];
 
+    // 부족한 오행(A∪B, 중복 제거)마다 문구를 이어붙인다. 아무도 부족한 오행이 없으면 기존 플레이스홀더로 대체.
+    var lackingElements = result.reasons.balance.aLacking.concat(
+      result.reasons.balance.bLacking.filter(function (e) { return result.reasons.balance.aLacking.indexOf(e) === -1; })
+    );
+    var wuxingText = lackingElements.length
+      ? {
+          en: lackingElements.map(function (e) { return texts.wuxing_point_by_element[e].en; }).join(' '),
+          ko: lackingElements.map(function (e) { return texts.wuxing_point_by_element[e].ko; }).join(' ')
+        }
+      : texts.wuxing_point_placeholder;
+
     var overview = [summaryLine];
     var point = [
-      { en: texts.wuxing_point_placeholder.en, ko: texts.wuxing_point_placeholder.ko },
-      { en: '(basis) ' + balanceBasisKo(result.reasons.balance), ko: '(계산 근거) ' + balanceBasisKo(result.reasons.balance) },
-      { en: '(basis) ' + zhiHapBasisKo(result.reasons.zhiHap), ko: '(계산 근거) ' + zhiHapBasisKo(result.reasons.zhiHap) }
+      { en: wuxingText.en, ko: wuxingText.ko },
+      { en: '(basis) ' + balanceBasisEn(result.reasons.balance), ko: '(계산 근거) ' + balanceBasisKo(result.reasons.balance) },
+      { en: '(basis) ' + zhiHapBasisEn(result.reasons.zhiHap), ko: '(계산 근거) ' + zhiHapBasisKo(result.reasons.zhiHap) }
     ];
     if (result.reasons.zhiHap.matched) {
       point.push({ en: texts.liuhe_bonus.en, ko: texts.liuhe_bonus.ko });
     }
     point.push(
       { en: daystemText.en, ko: daystemText.ko },
-      { en: '(basis) ' + dayStemBasisKo(result.reasons.dayStem), ko: '(계산 근거) ' + dayStemBasisKo(result.reasons.dayStem) }
+      { en: '(basis) ' + dayStemBasisEn(result.reasons.dayStem), ko: '(계산 근거) ' + dayStemBasisKo(result.reasons.dayStem) }
     );
     var boost = [texts.relationship_boost[relType]];
 
@@ -363,7 +405,7 @@
       personFormHtml('a', '첫 번째 사람', 'Person A') +
       personFormHtml('b', '두 번째 사람', 'Person B') +
       '<div class="scw-row scw-compat-reltype-row">' +
-        '<label for="scw-compat-reltype">관계 유형</label>' +
+        '<label for="scw-compat-reltype">' + COMPAT_UI.reltypeLabel + '</label>' +
         '<select id="scw-compat-reltype">' +
         RELATIONSHIP_TYPES.map(function (r) { return '<option value="' + r.key + '">' + r[LANG] + '</option>'; }).join('') +
         '</select>' +
