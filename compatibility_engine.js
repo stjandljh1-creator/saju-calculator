@@ -64,11 +64,11 @@
   // 궁합 입력 폼(personFormHtml)·제출 버튼에서 쓰는 언어별 UI 문구
   var COMPAT_UI = LANG === 'en' ? {
     solar: 'Solar Calendar', lunar: 'Lunar Calendar',
-    birthplace: 'Birth City', submit: 'Calculate Compatibility',
+    submit: 'Calculate Compatibility',
     reltypeLabel: 'Relationship Type'
   } : {
     solar: '양력', lunar: '음력',
-    birthplace: '출생지', submit: '궁합 계산하기',
+    submit: '궁합 계산하기',
     reltypeLabel: '관계 유형'
   };
 
@@ -120,7 +120,6 @@
     var lacking = Object.keys(wuxing).filter(function (e) { return wuxing[e] === 0; });
 
     return {
-      birthplace: input.birthplace || '',
       timeUnknown: input.timeUnknown,
       pillars: {
         year: yearGan + yearZhi, month: monthGan + monthZhi,
@@ -210,10 +209,6 @@
           '<select id="scw-compat-' + id + '-hour"></select>' +
           '<label><input type="checkbox" id="scw-compat-' + id + '-hour-unknown"> 시간 모름</label>' +
         '</div>' +
-        '<div class="scw-row">' +
-          '<label for="scw-compat-' + id + '-place">' + COMPAT_UI.birthplace + '</label>' +
-          '<input type="text" id="scw-compat-' + id + '-place" class="scw-compat-place" placeholder="예: 서울">' +
-        '</div>' +
       '</div>'
     );
   }
@@ -268,8 +263,7 @@
       day: parseInt($('#scw-compat-' + id + '-day').value, 10),
       isLeap: $('#scw-compat-' + id + '-leap').checked,
       timeUnknown: timeUnknown,
-      hour: timeUnknown ? 12 : parseInt($('#scw-compat-' + id + '-hour').value, 10),
-      birthplace: $('#scw-compat-' + id + '-place').value.trim()
+      hour: timeUnknown ? 12 : parseInt($('#scw-compat-' + id + '-hour').value, 10)
     };
   }
 
@@ -395,7 +389,6 @@
     '.saju-calc-widget .scw-compat-panel { margin-top: 18px; border: 1px solid var(--scw-border); border-radius: 2px; padding: 18px 16px; }' +
     '.saju-calc-widget .scw-compat-person { border-top: 1px solid var(--scw-border); padding-top: 14px; margin-top: 14px; }' +
     '.saju-calc-widget .scw-compat-person:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }' +
-    '.saju-calc-widget select.scw-compat-place, .saju-calc-widget input.scw-compat-place { background: transparent; color: var(--scw-fg); border: 1px solid var(--scw-border); border-radius: 2px; padding: 6px 8px; font-size: .9em; }' +
     '.saju-calc-widget .scw-compat-reltype-row select { background: transparent; color: var(--scw-fg); border: 1px solid var(--scw-border); border-radius: 2px; padding: 6px 8px; }' +
     '.saju-calc-widget .scw-compat-score { font-family: Georgia, "Times New Roman", serif; font-size: 2.2em; color: var(--scw-gold); text-align: center; margin-bottom: 4px; }' +
     '.saju-calc-widget .scw-compat-grade { text-align: center; font-size: .8em; letter-spacing: .12em; text-transform: uppercase; color: var(--scw-muted); margin-bottom: 18px; }';
