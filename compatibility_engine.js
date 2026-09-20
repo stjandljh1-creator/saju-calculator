@@ -65,11 +65,14 @@
   var COMPAT_UI = LANG === 'en' ? {
     solar: 'Solar Calendar', lunar: 'Lunar Calendar',
     submit: 'Calculate Compatibility',
-    reltypeLabel: 'Relationship Type'
+    reltypeLabel: 'Relationship Type',
+    leapMonth: 'Leap month', hourUnknown: 'Time Unknown',
+    year: 'Year', month: 'Month', day: 'Day'
   } : {
     solar: '양력', lunar: '음력',
     submit: '궁합 계산하기',
-    reltypeLabel: '관계 유형'
+    reltypeLabel: '관계 유형',
+    leapMonth: '윤달', hourUnknown: '시간 모름'
   };
 
   // v1 등급 컷오프 — 균등 배분 스코어링에서 시작한 초기값, 추후 실제 사례로 조정 예정
@@ -198,16 +201,22 @@
         '<div class="scw-row">' +
           '<label><input type="radio" name="scw-compat-' + id + '-caltype" value="solar" checked> ' + COMPAT_UI.solar + '</label>' +
           '<label><input type="radio" name="scw-compat-' + id + '-caltype" value="lunar"> ' + COMPAT_UI.lunar + '</label>' +
-          '<label id="scw-compat-' + id + '-leap-wrap" style="display:none;"><input type="checkbox" id="scw-compat-' + id + '-leap"> 윤달</label>' +
+          '<label id="scw-compat-' + id + '-leap-wrap" style="display:none;"><input type="checkbox" id="scw-compat-' + id + '-leap"> ' + COMPAT_UI.leapMonth + '</label>' +
         '</div>' +
         '<div class="scw-row">' +
-          '<select id="scw-compat-' + id + '-year"></select>년 ' +
-          '<select id="scw-compat-' + id + '-month"></select>월 ' +
-          '<select id="scw-compat-' + id + '-day"></select>일' +
+          (LANG === 'en' ?
+            COMPAT_UI.year + ' <select id="scw-compat-' + id + '-year"></select> ' +
+            COMPAT_UI.month + ' <select id="scw-compat-' + id + '-month"></select> ' +
+            COMPAT_UI.day + ' <select id="scw-compat-' + id + '-day"></select>'
+          :
+            '<select id="scw-compat-' + id + '-year"></select>년 ' +
+            '<select id="scw-compat-' + id + '-month"></select>월 ' +
+            '<select id="scw-compat-' + id + '-day"></select>일'
+          ) +
         '</div>' +
         '<div class="scw-row">' +
           '<select id="scw-compat-' + id + '-hour"></select>' +
-          '<label><input type="checkbox" id="scw-compat-' + id + '-hour-unknown"> 시간 모름</label>' +
+          '<label><input type="checkbox" id="scw-compat-' + id + '-hour-unknown"> ' + COMPAT_UI.hourUnknown + '</label>' +
         '</div>' +
       '</div>'
     );
