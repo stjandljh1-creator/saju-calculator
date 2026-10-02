@@ -61,8 +61,8 @@
     '病': '병', '死': '사', '墓': '묘', '绝': '절', '胎': '태', '养': '양'
   };
   var STAGE_EN = {
-    '장생': 'Birth', '목욕': 'Bath', '관대': 'Youth', '건록': 'Prime', '제왕': 'Peak', '쇠': 'Decline',
-    '병': 'Sickness', '사': 'Death', '묘': 'Tomb', '절': 'Extinction', '태': 'Conception', '양': 'Nurture'
+    '장생': 'Birth', '목욕': 'Bathing', '관대': 'Coming of Age', '건록': 'Prime', '제왕': 'Peak', '쇠': 'Waning',
+    '병': 'Slowing', '사': 'Resting', '묘': 'Storage', '절': 'Cut-off', '태': 'Conception', '양': 'Taking Shape'
   };
   var CHANG_SHENG_KO = ['장생', '목욕', '관대', '건록', '제왕', '쇠', '병', '사', '묘', '절', '태', '양'];
   // 일간별 자시(子) 기준 십이운성 오프셋 (lunar-javascript LunarUtil.CHANG_SHENG_OFFSET과 동일)
