@@ -295,7 +295,7 @@
       box.__drMinor = !!ch.minor; // 다시 계산할 때마다 최신 나이 기준
       function apply() {
         var minor = !!box.__drMinor;
-        var hideKeys = ['Wealth', 'Love', 'Career', 'Health'], hidden = 0;
+        var hideKeys = ['Wealth', 'Love', 'Career', 'Health', 'Daily Rhythm'], hidden = 0;
         Array.prototype.slice.call(box.querySelectorAll('.scw-today-cat')).forEach(function (c) {
           var lab = c.querySelector('.scw-tcl-en'), name = lab ? lab.textContent.trim() : '';
           var hide = minor && hideKeys.indexOf(name) >= 0;
@@ -303,7 +303,7 @@
         });
         var n = document.getElementById('dr-today-minor');
         if (minor && hidden) {
-          if (!n) { n = document.createElement('p'); n.id = 'dr-today-minor'; n.className = 'dr-reports-minor'; n.textContent = 'Today’s Fortune for wealth, love, career, and health is for readers 14 and older.'; box.appendChild(n); }
+          if (!n) { n = document.createElement('p'); n.id = 'dr-today-minor'; n.className = 'dr-reports-minor'; n.textContent = 'Today’s Fortune for wealth, love, career, and daily rhythm is for readers 14 and older.'; box.appendChild(n); }
           else if (n.parentNode !== box) box.appendChild(n);
           n.style.display = '';
         } else if (n) n.style.display = 'none';

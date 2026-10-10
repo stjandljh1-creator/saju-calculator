@@ -1164,7 +1164,7 @@
     { key: 'wealth', en: 'Wealth', ko: '재물운', icon: 'wealth.png', bg: 'bg_wealth.png' },
     { key: 'love', en: 'Love', ko: '애정운', icon: 'love.png', bg: 'bg_love.png' },
     { key: 'career', en: 'Career', ko: '직업운', icon: 'career.png', bg: 'bg_career.png' },
-    { key: 'health', en: 'Health', ko: '건강운', icon: 'health.png', bg: 'bg_health.png' },
+    { key: 'health', en: 'Daily Rhythm', ko: '생활 리듬', icon: 'health.png', bg: 'bg_health.png' },
     { key: 'relationships', en: 'Relationships', ko: '대인관계운', icon: 'relationship.png', bg: 'bg_relationship.png' }
   ];
 
@@ -1206,16 +1206,16 @@
       '정인': { en: 'A mentor, a credential, or useful advice reaches you at the right moment.', ko: '멘토, 자격, 혹은 요긴한 조언이 적절한 순간에 옵니다.' }
     },
     health: {
-      '비견': { en: 'Your body responds well to shared activity — move alongside someone today.', ko: '몸이 함께하는 활동에 잘 반응합니다. 오늘은 누군가와 함께 움직이세요.' },
-      '겁재': { en: 'Overexertion is the risk — you may push past what your body actually has.', ko: '과로가 위험 요소입니다. 몸이 감당할 수 있는 것 이상으로 밀어붙일 수 있습니다.' },
-      '식신': { en: 'Appetite and digestion are steady — a good day to eat and rest well.', ko: '식욕과 소화가 안정적인 날입니다. 잘 먹고 잘 쉬기 좋습니다.' },
-      '상관': { en: 'Restlessness in the body — nervous energy needs an outlet.', ko: '몸이 들썩이는 날입니다. 예민한 에너지를 풀어줄 출구가 필요합니다.' },
-      '편재': { en: 'Irregular hours catch up with you. A late night costs more than usual today.', ko: '불규칙한 생활 패턴이 드러납니다. 오늘은 늦은 밤의 대가가 평소보다 큽니다.' },
-      '정재': { en: 'A steady routine — sleep, meals, movement — pays off directly today.', ko: '꾸준한 루틴, 수면·식사·운동이 오늘 바로 효과를 보입니다.' },
-      '편관': { en: 'The body signals stress before the mind admits it. Listen early.', ko: '마음이 인정하기 전에 몸이 먼저 스트레스 신호를 보냅니다. 일찍 알아채세요.' },
-      '정관': { en: 'Discipline around daily habits is well-supported — a good day to start or keep a routine.', ko: '생활 습관을 꾸준히 지키는 힘이 받쳐 주는 날일 수 있습니다. 새 습관을 시작하거나 이어 가기 좋습니다.' },
-      '편인': { en: 'Rest and solitude heal more than activity does today.', ko: '오늘은 활동보다 휴식과 혼자만의 시간이 더 회복시켜 줍니다.' },
-      '정인': { en: 'Your body asks to be taken care of, not pushed. Sleep counts as productivity today.', ko: '몸이 밀어붙이기보다 돌봄을 원합니다. 오늘은 잠도 생산적인 일입니다.' }
+      '비견': { en: 'A good day to keep pace with someone else, like a walk or a task done side by side.', ko: '누군가와 발을 맞추기 좋은 날입니다. 같이 걷거나 나란히 일해 보세요.' },
+      '겁재': { en: 'You may be tempted to take on too much today. Leave some room in the schedule.', ko: '오늘은 일을 너무 많이 떠안고 싶어질 수 있습니다. 일정에 여유를 남겨 두세요.' },
+      '식신': { en: 'An easygoing day. Regular meals and an unhurried evening suit it.', ko: '느긋한 날입니다. 제때 먹는 식사와 서두르지 않는 저녁이 잘 어울립니다.' },
+      '상관': { en: 'Restless energy may look for an outlet. A change of scene can help you settle.', ko: '들뜬 기분이 출구를 찾을 수 있습니다. 장소를 잠깐 바꾸면 마음이 가라앉기 쉽습니다.' },
+      '편재': { en: 'Plans may shift around today. Try to keep at least one fixed time, like dinner.', ko: '오늘은 일정이 이리저리 바뀔 수 있습니다. 저녁처럼 고정된 시간 하나는 지켜 보세요.' },
+      '정재': { en: 'A steady day. Sticking to your usual sleep, meal and movement times fits it well.', ko: '꾸준한 날입니다. 평소의 수면·식사·움직임 시간을 지키는 것과 잘 맞습니다.' },
+      '편관': { en: 'Pressure may build quietly. Plan a short pause before the busiest part of the day.', ko: '압박이 조용히 쌓일 수 있습니다. 가장 바쁜 때 앞에 짧은 쉼을 넣어 보세요.' },
+      '정관': { en: 'A good day to start or keep a simple daily routine.', ko: '간단한 하루 루틴을 시작하거나 이어 가기 좋은 날입니다.' },
+      '편인': { en: 'Quiet time on your own may suit you better than a packed schedule today.', ko: '오늘은 빽빽한 일정보다 혼자만의 조용한 시간이 더 잘 맞을 수 있습니다.' },
+      '정인': { en: 'A slower pace fits today. An early night counts as a good use of time.', ko: '느린 속도가 어울리는 날입니다. 일찍 자는 것도 시간을 잘 쓰는 일입니다.' }
     },
     relationships: {
       '비견': { en: 'You connect best with people who feel like peers today, not superiors or subordinates.', ko: '오늘은 위아래 없이 대등하게 느껴지는 사람과 가장 잘 통합니다.' },
@@ -1275,18 +1275,18 @@
       '양': { en: 'Skills you have been quietly building are close to ready.', ko: '조용히 쌓아온 실력이 거의 준비된 시기입니다.' }
     },
     health: {
-      '장생': { en: 'Vitality is renewing — a good day to start a daily habit from scratch.', ko: '활력이 새로 시작되는 시기일 수 있습니다. 생활 습관을 처음부터 시작하기 좋은 날입니다.' },
-      '목욕': { en: 'Energy is inconsistent — do not judge your whole condition by one rough hour.', ko: '컨디션이 들쭉날쭉한 시기입니다. 한순간으로 전체 몸 상태를 판단하지 마세요.' },
-      '관대': { en: 'Stamina is building steadily. You can handle a bit more than yesterday.', ko: '체력이 꾸준히 붙는 시기입니다. 어제보다 조금 더 감당할 수 있습니다.' },
-      '건록': { en: 'Physical condition is at its most reliable this cycle.', ko: '이번 주기 중 몸 상태가 가장 안정적인 시기입니다.' },
-      '제왕': { en: 'Energy runs high — the risk is not knowing when to stop.', ko: '에너지가 넘치는 시기입니다. 언제 멈춰야 할지 모르는 게 위험 요소입니다.' },
-      '쇠': { en: 'Vitality is easing off. Slow down before your body makes you.', ko: '활력이 조금씩 꺾이는 시기입니다. 몸이 멈추게 만들기 전에 스스로 늦추세요.' },
-      '병': { en: 'Genuinely low energy — treat rest as the priority, not the fallback.', ko: '실제로 기력이 낮은 날입니다. 휴식을 차선이 아니라 우선으로 두세요.' },
-      '사': { en: 'A depleted stretch. Recovery starts with stopping, not pushing through.', ko: '소진된 시기입니다. 회복은 버티는 게 아니라 멈추는 데서 시작됩니다.' },
-      '묘': { en: 'The body wants stillness — minimal movement, maximum rest.', ko: '몸이 정적을 원하는 시기입니다. 움직임은 최소로, 휴식은 최대로.' },
-      '절': { en: 'A low point physically — also the clearest moment to notice what has been wrong for a while.', ko: '몸 상태가 바닥인 시기지만, 오래된 문제를 가장 뚜렷하게 알아챌 수 있는 때이기도 합니다.' },
-      '태': { en: 'Recovery is quietly beginning, even if you do not feel it yet.', ko: '아직 체감하지 못해도, 회복이 조용히 시작되는 시기입니다.' },
-      '양': { en: 'Strength is rebuilding in the background. Keep the routine gentle and consistent.', ko: '체력이 뒤에서 다시 쌓이는 시기입니다. 루틴은 부드럽고 꾸준하게 유지하세요.' }
+      '장생': { en: 'A fresh-start feeling. A good day to begin a small daily habit.', ko: '새로 시작하는 기분이 드는 날입니다. 작은 하루 습관을 시작하기 좋습니다.' },
+      '목욕': { en: 'Your pace may feel uneven today. Do not judge the whole day by one slow hour.', ko: '오늘은 속도가 들쭉날쭉할 수 있습니다. 느린 한 시간으로 하루 전체를 판단하지 마세요.' },
+      '관대': { en: 'Your routine is finding its feet. You can add a little more than yesterday.', ko: '루틴이 자리를 잡아 가는 중입니다. 어제보다 조금 더 해도 좋습니다.' },
+      '건록': { en: 'A dependable day for your usual routine.', ko: '평소 루틴을 믿고 따라가기 좋은 날입니다.' },
+      '제왕': { en: 'You may want to keep going all day. Decide in advance when to stop.', ko: '하루 종일 달리고 싶어질 수 있습니다. 언제 멈출지 미리 정해 두세요.' },
+      '쇠': { en: 'A good day to ease off a little before you feel you have to.', ko: '꼭 쉬어야겠다 싶기 전에 조금 늦춰 가기 좋은 날입니다.' },
+      '병': { en: 'A low-key day. Make rest part of the plan, not an afterthought.', ko: '조용히 보내기 좋은 날입니다. 쉬는 시간을 나중 일이 아니라 계획에 넣으세요.' },
+      '사': { en: 'A good day to stop and pause rather than push through.', ko: '버티기보다 잠시 멈추고 쉬어 가기 좋은 날입니다.' },
+      '묘': { en: 'Stillness suits today. Keep the schedule light where you can.', ko: '고요함이 어울리는 날입니다. 할 수 있는 만큼 일정을 가볍게 두세요.' },
+      '절': { en: 'A quiet day that is good for noticing which habits are no longer working for you.', ko: '더는 맞지 않는 습관이 무엇인지 알아채기 좋은 조용한 날입니다.' },
+      '태': { en: 'A new rhythm may be starting, even if you cannot see it yet.', ko: '아직 보이지 않아도 새로운 리듬이 시작되는 중일 수 있습니다.' },
+      '양': { en: 'Keep your routine gentle and consistent today.', ko: '오늘은 루틴을 부드럽고 꾸준하게 이어 가세요.' }
     },
     relationships: {
       '장생': { en: 'A new connection is forming — treat it gently, it is early.', ko: '새로운 인연이 막 시작되는 시기입니다. 아직 이르니 조심스럽게 다루세요.' },
@@ -1345,7 +1345,7 @@
     { key: 'career', emoji: '💼', icon: 'icon_career_bright.png', en: 'Career', ko: '직업운' },
     { key: 'business', emoji: '📈', icon: 'icon_wealth_bright.png', en: 'Business', ko: '사업운' },
     { key: 'friends', emoji: '🤝', icon: 'icon_relationship_bright.png', en: 'Friends', ko: '친구운' },
-    { key: 'health', emoji: '🩺', icon: 'icon_health_bright.png', en: 'Health', ko: '건강운' },
+    { key: 'health', emoji: '🌙', icon: 'icon_health_bright.png', en: 'Daily Rhythm', ko: '생활 리듬' },
     { key: 'life', emoji: '🔮', icon: 'hero_bright.png', en: 'Lifetime', ko: '평생운세' }
   ];
 
@@ -1368,22 +1368,6 @@
       '</div>';
   }
 
-  var ELEMENT_LUCKY = {
-    '목': { en: 'green', ko: '초록·연두 계열' },
-    '화': { en: 'red', ko: '빨강 계열' },
-    '토': { en: 'yellow or earthy brown', ko: '노랑·황토 계열' },
-    '금': { en: 'white or silver', ko: '흰색·은색 계열' },
-    '수': { en: 'black or navy', ko: '검정·남색 계열' }
-  };
-  function luckyColorTip(lacking) {
-    if (!lacking || !lacking.length) return null;
-    var en = lacking.map(function (e) { return ELEMENT_LUCKY[e].en; }).join(' and ');
-    var ko = lacking.map(function (e) { return ELEMENT_LUCKY[e].ko; }).join(', ');
-    return {
-      en: 'Keeping a bit of ' + en + ' around you — clothes, small objects, even a phone case — helps fill in what your chart runs short on.',
-      ko: ko + ' 아이템을 곁에 두면, 원국에서 부족한 기운을 채우는 데 도움이 돼.'
-    };
-  }
 
   var GENERAL_DISCLAIMER = {
     en: "None of this is fixed in stone — read it as a lean, not a locked-in script.",
@@ -1449,12 +1433,10 @@
       if (ctx.strengthInfo.verdict === '신약' && total >= 2) {
         point.push({ en: "When there's this much money-energy circulating and not quite enough of your own foundation to direct it, it stops feeling like an asset and starts feeling like a weight you're dragging around — decisions about money end up costing you energy rather than giving you any.", ko: '이 정도로 재물 기운이 많이 돌아다니는데 그걸 다룰 자기 기반이 살짝 부족하면, 그게 자산처럼 느껴지기보다 끌고 다녀야 하는 짐처럼 느껴지기 쉬워. 돈에 대한 결정을 내릴 때마다 힘이 나기보다 오히려 에너지가 빠지는 식이야.' });
         point.push({ en: 'This tends to be roughest in roles that hand you outsized financial responsibility without much backup, like managing a big shared budget alone or being the one person a family or team leans on for money decisions.', ko: '이런 성향은 지원 없이 혼자 큰 공동 예산을 관리하거나, 가족이나 팀이 돈 문제를 전부 너한테 기대는 것처럼 과한 재정적 책임을 떠안는 자리에서 특히 힘들어져.' });
-        point.push({ en: 'In everyday terms, it can show up as feeling physically drained after a single day of bill-paying and budget-juggling, or carrying a low-grade tension in your body whenever a big payment is coming up, even when the numbers actually work out fine.', ko: '일상에서는 청구서 처리하고 예산 맞추는 하루를 보내고 나면 몸이 유독 지치거나, 숫자는 사실 문제없이 맞아떨어지는데도 큰 결제를 앞두고 있으면 몸 어딘가가 은근히 긴장하는 식으로 나타날 수 있어.' });
+        point.push({ en: 'In everyday terms, it can show up as feeling worn out after a single day of bill-paying and budget-juggling, or a low-grade worry whenever a big payment is coming up, even when the numbers actually work out fine.', ko: '일상에서는 청구서 처리하고 예산 맞추는 하루를 보내고 나면 유독 지치거나, 숫자는 사실 문제없이 맞아떨어지는데도 큰 결제를 앞두고 있으면 은근히 마음이 쓰이는 식으로 나타날 수 있어.' });
       }
 
       var boost = [];
-      var color = luckyColorTip(ctx.strengthInfo.lacking);
-      if (color) boost.push(color);
       if (jeong >= pyeon) {
         boost.push({ en: 'Because your money sense already runs on consistency, automating the habit does the one thing that actually multiplies steadiness — it removes the moment-to-moment willpower requirement so the saving happens whether or not you feel like it that day.', ko: '원래도 재물 감각이 꾸준함 위에 세워져 있는 편이라, 이걸 자동화하면 그 성실함을 진짜로 증폭시키는 셈이야. 그날그날의 의지력이 필요 없어지니까, 하고 싶은 기분이 아니어도 저축은 그냥 일어나거든.' });
         boost.push({ en: 'This works especially well if your income already arrives in a predictable rhythm, like a fixed salary or a retainer client, since there is a reliable number to automate against in the first place.', ko: '이 방법은 월급처럼 수입이 예측 가능한 리듬으로 들어올 때 특히 잘 맞아. 자동이체를 걸어둘 만한 안정적인 숫자가 애초에 있으니까.' });
@@ -1502,7 +1484,7 @@
         point.push({ en: 'This tends to bite hardest in settings that rely on subtle cues rather than a direct ask — a workplace friendship that could tip into something more, a group where someone is clearly hanging back for you.', ko: '이런 성향은 대놓고 말하기보다 은근한 신호로 흘러가는 상황에서 특히 발목을 잡아. 뭔가로 발전할 수도 있는 직장 내 친분이나 친구 무리 안 상황처럼.' });
         point.push({ en: "It can show up as a friend telling you 'that person clearly likes you' about someone you hadn't noticed, or turning down an invitation without realizing it was meant as a first date.", ko: "친구가 '그 사람 딱 봐도 너 좋아하잖아'라고 말해주기 전까진 진짜 몰랐거나, 사실은 첫 데이트였던 약속을 그냥 거절해버리는 식으로 나타날 수 있어." });
       } else if (jeong > pyeon) {
-        point.push({ en: "Chasing safety this hard can flatten the excitement itself — comfort and spark are not the same thing, and someone leaning toward fast attraction would call what you have 'stable' at best, 'a little boring' at worst.", ko: "너무 안정만 찾다 보면 설렘 자체가 밋밋해질 수 있어. 반대로 빠르고 예측불가한 쪽인 사람이 보면, 네 관계는 잘해야 '안정적', 나쁘게 보면 '좀 심심한' 관계로 보일 수도 있어." });
+        point.push({ en: "Chasing safety this hard can flatten the excitement itself — comfort and spark are not the same thing, and someone leaning toward fast attraction would call what you have 'stable' on a good day and 'a little boring' on a slow one.", ko: "너무 안정만 찾다 보면 설렘 자체가 밋밋해질 수 있어. 반대로 빠르고 예측불가한 쪽인 사람이 보면, 네 관계는 잘해야 '안정적', 나쁘게 보면 '좀 심심한' 관계로 보일 수도 있어." });
         point.push({ en: 'This tends to show up hardest early on, where a little unpredictability actually signals interest — playing it too safe too early can read as lukewarm rather than careful.', ko: '이 성향은 이제 막 만나기 시작한 초반에 특히 문제가 돼. 너무 일찍부터 안전하게만 굴면 신중해 보이기보다 미지근해 보일 수 있어.' });
         point.push({ en: "Day to day, it can look like sticking to the same three 'safe' date spots, or waiting for the other person to suggest something exciting instead of proposing it yourself.", ko: "일상에서는 늘 가던 '안전한' 데이트 코스만 뱅뱅 돌거나, 재밌는 걸 먼저 제안하기보다 상대가 먼저 던져주길 기다리는 식으로 나타날 수 있어." });
       } else if (pyeon > jeong) {
@@ -1516,8 +1498,6 @@
       }
 
       var boost = [];
-      var color = luckyColorTip(ctx.strengthInfo.lacking);
-      if (color) boost.push(color);
       if (jeong >= pyeon) {
         boost.push({ en: 'Because your instinct already runs on familiarity, deliberately looking twice at people already around you plays directly to that strength — the person who deepens fastest with you is more likely already in your life.', ko: '연애 본능이 원래 친숙함 위에서 작동하는 편이라, 이미 곁에 있는 사람을 다시 눈여겨보는 게 가장 잘 맞는 방법이야.' });
         boost.push({ en: 'This works especially well in settings where you already see the same faces regularly — a hobby group, a close friend circle — rather than environments built entirely around meeting brand-new people fast.', ko: '오래 같이한 취미 모임, 가까운 친구 무리처럼 원래도 자주 보는 얼굴들이 있는 자리에서 특히 잘 통해.' });
@@ -1795,8 +1775,6 @@
         ]
       };
       var boost = BOOST_TEXT[mode].slice();
-      var color = luckyColorTip(ctx.strengthInfo.lacking);
-      if (color) boost.push(color);
 
       return sectionHtml('Overview', '총운풀이', overview) +
         sectionHtml('Point', '포인트', point) +
@@ -1864,8 +1842,6 @@
       var point = POINT_TEXT[mode].slice();
 
       var boost = [];
-      var color = luckyColorTip(ctx.strengthInfo.lacking);
-      if (color) boost.push(color);
       if (ctx.strengthInfo.verdict === '신강') {
         boost.push({ en: 'Deliberately handing off a piece of the work, instead of holding all of it yourself, is what lets this actually scale — something someone leaning on a partner already does by default, but for you it takes a conscious decision to let go.', ko: '혼자 다 하려 하지 말고, 일부는 맡기는 연습을 해두면 오래 갈 수 있어. 파트너에게 의지하는 사람이라면 이미 자연스럽게 하고 있을 일이지만, 너한테는 일부러 내려놓겠다는 결정이 필요해.' });
         boost.push({ en: "This tends to matter most as the business grows past the point where one person can genuinely hold every piece of it in their head — hiring, delegating a full function, trusting someone else's judgment on something that matters.", ko: '이건 사업이 한 사람 머릿속에 모든 걸 다 담을 수 없을 만큼 커진 시점에 특히 중요해져. 채용을 하거나, 한 영역을 통째로 맡기거나, 중요한 일에서 다른 사람의 판단을 믿어야 할 때.' });
@@ -1917,7 +1893,7 @@
       var POINT_TEXT = {
         none: [
           { en: 'Being comfortable alone means asking for help when you actually need it does not come naturally — someone with a wider circle would have five people to call without a second thought, while you might not call anyone at all.', ko: '혼자가 편한 만큼, 정작 힘들 때 도움을 청하는 게 서툴 수 있어. 인맥 넓은 사람이라면 고민 없이 다섯 명한테 전화했을 텐데, 너는 아예 아무한테도 안 할 수도 있어.' },
-          { en: 'This tends to bite hardest during an actual emergency or a hard stretch — moving, a health scare, a layoff — the exact moments a wider circle would absorb some of the load without you having to ask twice.', ko: '이런 성향은 이사, 건강 문제, 실직처럼 진짜 힘든 시기에 특히 발목을 잡아. 인맥이 넓다면 굳이 두 번 부탁 안 해도 부담을 나눠줬을 순간들이야.' },
+          { en: 'This tends to bite hardest during an actual emergency or a hard stretch — moving, a sudden setback, a layoff — the exact moments a wider circle would absorb some of the load without you having to ask twice.', ko: '이런 성향은 이사, 건강 문제, 실직처럼 진짜 힘든 시기에 특히 발목을 잡아. 인맥이 넓다면 굳이 두 번 부탁 안 해도 부담을 나눠줬을 순간들이야.' },
           { en: 'It can show up as struggling through a move entirely by yourself that a phone call could have fixed in an hour, or sitting with a hard problem alone for weeks because reaching out never occurred to you.', ko: '일상에서는 전화 한 통이면 한 시간 만에 해결됐을 이사를 혼자 낑낑대며 끝내거나, 연락할 생각 자체를 못 해서 힘든 문제를 몇 주씩 혼자 끌어안고 있는 식으로 나타날 수 있어.' }
         ],
         small: [
@@ -1961,8 +1937,6 @@
         ]
       };
       var boost = BOOST_TEXT[mode].slice();
-      var color = luckyColorTip(ctx.strengthInfo.lacking);
-      if (color) boost.push(color);
 
       return sectionHtml('Overview', '총운풀이', overview) +
         sectionHtml('Point', '포인트', point) +
@@ -1970,140 +1944,59 @@
     },
 
     health: function (ctx) {
-      var EXCESS = {
-        '목': [
-          { en: "Some charts run low on Wood energy, where getting moving takes real effort. Yours runs the other way — Wood energy piles up, so tension builds easily and nerves or muscles run tight more often than they should.", ko: '어떤 원국은 목 기운이 부족해서 몸을 움직이는 것 자체가 힘들어. 너는 반대야. 목 기운이 몰려 있어서 긴장이 잘 쌓이고, 근육이나 신경 쪽이 자주 뻣뻣해질 수 있어.' },
-          { en: 'This tendency fits a lifestyle with regular release built in — daily stretching, a set time to unwind — better than a routine with no scheduled downtime, where tension just keeps accumulating unchecked.', ko: '이런 성향은 매일 스트레칭하거나 정해진 시간에 긴장을 푸는 것처럼, 해소가 루틴에 들어있는 생활습관과 잘 맞아. 따로 쉬는 시간이 없는 생활보다.' },
-          { en: 'In everyday terms, it can look like your shoulders creeping up toward your ears during a long meeting without you noticing, or reaching for a short walk when a task starts to feel stuck.', ko: '일상에서는 긴 회의 중에 나도 모르게 어깨가 잔뜩 올라가 있거나, 일이 막힐 때 짧은 산책을 찾게 되는 식으로 나타날 수 있어.' }
-        ],
-        '화': [
-          { en: 'Some charts run low on Fire energy, circulation running a little cold. Yours runs the other way — Fire piles up, heat tends to rise upward, so headaches and tired eyes show up more than average.', ko: '어떤 원국은 화 기운이 부족해서 순환이 다소 차가운 편이야. 너는 반대야. 화 기운이 몰려 있어서 열이 위로 쏠리는 느낌이 있고, 두통이나 눈 피로가 잦을 수 있어.' },
-          { en: 'This tendency fits a lifestyle with built-in cooldown moments — a few minutes of quiet between back-to-back tasks — better than a schedule packed wall-to-wall with no breathing room.', ko: '이런 성향은 일과 사이사이에 잠깐 조용히 쉬는 시간이 포함된 생활습관과 잘 맞아. 틈 없이 빡빡하게 채워진 일정보다.' },
-          { en: 'In everyday terms, it can look like reaching for the eye drops by mid-afternoon most days, or noticing you think more clearly right after splashing cold water on your face.', ko: '일상에서는 오후 중반쯤 되면 안약을 찾게 되거나, 찬물로 세수하고 나면 생각이 훨씬 맑아지는 걸 느끼는 식으로 나타날 수 있어.' }
-        ],
-        '토': [
-          { en: 'Some charts run low on Earth energy, digestion sensitive but not easily thrown by a single off day. Yours runs the other way — digestion is sensitive to routine, and an off eating schedule shows up in your body fast.', ko: '어떤 원국은 토 기운이 부족해서 소화기관이 예민하되 하루 정도는 잘 버텨. 너는 반대야. 소화기관이 리듬에 예민한 편이라, 식사 시간이 흐트러지면 몸에 바로 티가 나.' },
-          { en: 'This tendency fits a lifestyle with a genuinely fixed meal rhythm — eating around the same time most days — better than a schedule where meals shift around unpredictably with work or plans.', ko: '이런 성향은 거의 매일 비슷한 시간에 식사하는 것처럼 식사 리듬이 확실히 고정된 생활습관과 잘 맞아. 일이나 약속에 따라 식사 시간이 들쭉날쭉한 일정보다.' },
-          { en: 'In everyday terms, it can look like your stomach visibly reacting the one day you skip lunch, or feeling noticeably steadier on weeks where dinner happens at roughly the same hour every night.', ko: '일상에서는 점심을 거른 딱 그날 배 상태가 눈에 띄게 안 좋아지거나, 저녁을 매일 비슷한 시간에 먹은 주에는 컨디션이 눈에 띄게 안정적인 식으로 나타날 수 있어.' }
-        ],
-        '금': [
-          { en: 'Some charts run low on Metal energy, joints and skin staying fairly loose and supple without much upkeep. Yours runs the other way — the respiratory system and skin run a little stiff and dry.', ko: '어떤 원국은 금 기운이 부족해서 관절이나 피부가 딱히 관리 안 해도 유연한 편이야. 너는 반대야. 몸이 뻣뻣하게 굳는 느낌이 있고, 호흡기·피부 쪽이 건조해지기 쉬워.' },
-          { en: 'This tendency fits a lifestyle with regular, gentle maintenance built in — a stretching routine, a moisturizing habit — better than skipping upkeep until stiffness or dryness becomes hard to ignore.', ko: '이런 성향은 스트레칭 루틴이나 보습 습관처럼 정기적이고 가벼운 관리가 포함된 생활습관과 잘 맞아. 뻣뻣함이나 건조함이 무시하기 힘들어질 때까지 관리를 미루는 것보다.' },
-          { en: 'In everyday terms, it can look like your hands feeling noticeably drier the moment the heater turns on for the season, or joints feeling stiffer on the days you skip your usual stretch.', ko: '일상에서는 계절이 바뀌어 난방을 틀기 시작하면 바로 손이 눈에 띄게 건조해지거나, 평소 하던 스트레칭을 거른 날 관절이 더 뻣뻣하게 느껴지는 식으로 나타날 수 있어.' }
-        ],
-        '수': [
-          { en: 'Some charts run low on Water energy, staying lean and warm without much effort. Yours runs the other way — fluid retention and a chill in the extremities are the pattern to watch.', ko: '어떤 원국은 수 기운이 부족해서 딱히 신경 안 써도 몸이 가볍고 따뜻한 편이야. 너는 반대야. 몸이 쉽게 붓거나 손발이 차가워지는 패턴을 눈여겨봐.' },
-          { en: 'This tendency fits a lifestyle with regular light movement and mindful evening habits — less salt late at night, legs up for a few minutes before bed — better than a sedentary routine with heavy late meals.', ko: '이런 성향은 가벼운 운동을 꾸준히 하고, 늦은 시간엔 짠 음식을 줄이거나 자기 전 다리를 잠깐 올려두는 것처럼 저녁 습관을 신경 쓰는 생활습관과 잘 맞아. 앉아있는 시간이 많고 늦은 밤 무거운 식사를 하는 루틴보다.' },
-          { en: 'In everyday terms, it can look like your rings feeling tighter by the end of a long day, or your feet staying cold even under a blanket until you actively warm them up.', ko: '일상에서는 하루가 끝날 때쯤 반지가 꽉 끼는 느낌이 들거나, 이불 속에서도 발이 계속 차가워서 일부러 데워줘야 하는 식으로 나타날 수 있어.' }
-        ]
+      // 2026-10-11 9차: 건강 리포트를 Daily Rhythm(생활 리듬)으로 바꿈. 몸 상태·증상·장기·음식 처방을 쓰지 않고,
+      // 하루 속도와 일정 습관만 '참고용'으로 적는다(법무 88·인문 88 필수 조건).
+      var RHYTHM_EXCESS = {
+        '목': { en: 'With a lot of Wood in your chart, your days may fill up fast, one plan leading straight into the next.', ko: '원국에 목 기운이 많으면, 하루가 계획에서 계획으로 빠르게 채워질 수 있어.' },
+        '화': { en: 'With a lot of Fire in your chart, you may run at full speed and forget to slow down.', ko: '원국에 화 기운이 많으면, 전속력으로 달리다 속도 줄이는 걸 잊기 쉬워.' },
+        '토': { en: 'With a lot of Earth in your chart, you may settle into one task and stay put for a long time.', ko: '원국에 토 기운이 많으면, 한 가지 일에 자리 잡고 오래 머무르는 편일 수 있어.' },
+        '금': { en: 'With a lot of Metal in your chart, you may hold your routines tightly and dislike changes to them.', ko: '원국에 금 기운이 많으면, 루틴을 단단히 지키고 바뀌는 걸 싫어하는 편일 수 있어.' },
+        '수': { en: 'With a lot of Water in your chart, your evenings may stretch later than you planned.', ko: '원국에 수 기운이 많으면, 저녁 시간이 계획보다 길어지기 쉬워.' }
       };
-      var LACKING = {
-        '목': [
-          { en: 'Some charts run heavy on Wood energy, quick to build tension. Yours runs light on it — getting the body moving in the first place takes extra effort, and momentum builds slowly rather than in a burst.', ko: '어떤 원국은 목 기운이 많아서 긴장이 빨리 쌓여. 너는 목 기운이 가벼운 편이야. 몸을 움직이기 시작하는 게 유독 힘들고, 추진력이 천천히 붙어.' },
-          { en: 'This tendency fits easing into movement gradually — a short walk before a real workout, a five-minute warm-up rule — better than a routine that expects full intensity right from the start.', ko: '이런 성향은 본격적인 운동 전에 짧게 걷는 것처럼 서서히 움직임을 늘려가는 생활습관과 잘 맞아. 처음부터 완전한 강도를 기대하는 루틴보다.' },
-          { en: 'In traditional five-elements pairing this leans toward the liver and eyes, so those are worth keeping an eye on, and green vegetables or sour foods — like a simple side of stir-fried spinach or a squeeze of lemon in water — are a reasonable everyday habit to reach for.', ko: '전통 오행 상응으로 보면 간·눈 쪽과 연결되는 자리라 이 부분을 눈여겨보면 좋고, 시금치나물 같은 녹색 채소 반찬이나 물에 레몬을 짜 넣는 것처럼 신맛 나는 음식을 일상 습관으로 참고해볼 만해.' }
-        ],
-        '화': [
-          { en: 'Some charts run heavy on Fire, heat rising too fast. Yours runs light on it — circulation runs a little cold, hands and feet chill easily, and energy takes a while to warm up.', ko: '어떤 원국은 화 기운이 많아서 열이 너무 빨리 올라. 너는 화 기운이 가벼운 편이야. 순환이 다소 차가운 편이고, 손발이 잘 차가워지고, 기운이 데워지는 데 시간이 걸려.' },
-          { en: 'This tendency fits building in a proper warm-up before diving into anything demanding — physical or mental — better than expecting yourself to perform at full speed the moment you start.', ko: '이런 성향은 뭔가 시작하기 전에 몸이든 마음이든 제대로 데우는 시간을 갖는 생활습관과 잘 맞아. 시작하자마자 전속력을 기대하는 것보다.' },
-          { en: 'This pairs with the heart and blood circulation in the traditional five-elements scheme, so that area is worth watching, along with bitter foods and anything that settles the mind — a cup of warm ginger tea in the morning or bitter greens with dinner are a reasonable everyday habit.', ko: '전통 오행 상응으로 보면 심장·혈액순환 쪽과 연결되는 자리라 이 부분을 눈여겨보면 좋고, 아침에 따뜻한 생강차 한 잔이나 저녁에 쓴맛 나는 나물처럼 쓴맛 음식이나 마음을 안정시키는 습관을 일상에서 참고해볼 만해.' }
-        ],
-        '토': [
-          { en: 'Some charts run heavy on Earth, sturdy digestion that shrugs off an irregular schedule. Yours runs light on it — digestion runs delicate, and it does not take much to throw it off balance.', ko: '어떤 원국은 토 기운이 많아서 소화기관이 튼튼해서 불규칙한 일정도 잘 버텨. 너는 토 기운이 가벼운 편이야. 소화기관이 약한 편이라, 조금만 무리해도 탈이 나기 쉬워.' },
-          { en: 'This tendency fits keeping meals simple and consistent — a similar, gentle breakfast most mornings — better than frequently swapping in heavy, unfamiliar, or irregular meals.', ko: '이런 성향은 아침마다 비슷하고 부담 없는 식사를 하는 것처럼 단순하고 일관된 식사 습관과 잘 맞아. 무겁고 낯선 음식을 자주 바꿔 먹는 것보다.' },
-          { en: 'This pairs with the stomach and digestive system in the traditional five-elements scheme, so that area is worth watching, along with root vegetables and naturally sweet foods — a bowl of pumpkin soup or a baked sweet potato are a reasonable everyday habit to lean on.', ko: '전통 오행 상응으로 보면 위장·소화기 쪽과 연결되는 자리라 이 부분을 눈여겨보면 좋고, 호박죽 한 그릇이나 군고구마처럼 뿌리채소나 단맛 나는 음식을 일상 습관으로 참고해볼 만해.' }
-        ],
-        '금': [
-          { en: 'Some charts run heavy on Metal, recovering from a cold almost before it starts. Yours runs light on it — recovery of the respiratory system runs slow, and a cold lingers longer than it should.', ko: '어떤 원국은 금 기운이 많아서 감기가 시작되기도 전에 회복돼. 너는 금 기운이 가벼운 편이야. 호흡기 회복이 느린 편이라, 감기 한번 걸리면 오래 가.' },
-          { en: 'This tendency fits protecting yourself early — layering up before it actually feels cold, keeping a humidifier running in dry seasons — better than waiting until symptoms show up to start taking care of yourself.', ko: '이런 성향은 추워지기 전에 미리 옷을 챙겨 입거나 건조한 계절엔 가습기를 틀어두는 것처럼 미리 챙기는 생활습관과 잘 맞아. 증상이 나타나고 나서야 신경 쓰는 것보다.' },
-          { en: 'This pairs with the lungs and respiratory tract in the traditional five-elements scheme, so that area is worth watching, along with spicy foods and white-colored foods — a bowl of warm doraji-muchim (bellflower root) or a bit of radish in your soup are a reasonable everyday habit.', ko: '전통 오행 상응으로 보면 폐·호흡기 쪽과 연결되는 자리라 이 부분을 눈여겨보면 좋고, 따뜻한 도라지무침 한 접시나 국에 무를 넣어 먹는 것처럼 매운맛 나는 음식이나 흰색 식품을 일상 습관으로 참고해볼 만해.' }
-        ],
-        '수': [
-          { en: 'Some charts run heavy on Water, bouncing back from a tiring day almost overnight. Yours runs light on it — stamina runs out faster than expected, and bounce-back takes longer than it should.', ko: '어떤 원국은 수 기운이 많아서 힘든 하루도 거의 하룻밤 새 회복돼. 너는 수 기운이 가벼운 편이야. 체력이 예상보다 빨리 바닥나고, 회복도 더딘 편이야.' },
-          { en: 'This tendency fits genuinely protecting your sleep and pacing your energy across a week — building in a lighter day after a demanding one — better than pushing through several intense days in a row and hoping to catch up later.', ko: '이런 성향은 수면을 확실히 챙기고 한 주 동안 에너지를 배분하는, 예를 들어 힘든 날 다음엔 가벼운 날을 두는 생활습관과 잘 맞아. 며칠 연속으로 밀어붙이고 나중에 몰아서 회복하려는 것보다.' },
-          { en: 'This pairs with the kidneys and urinary system in the traditional five-elements scheme, so that area is worth watching, along with salty foods and dark-colored foods — a bit of seaweed soup or black beans mixed into rice are a reasonable everyday habit.', ko: '전통 오행 상응으로 보면 신장·비뇨기 쪽과 연결되는 자리라 이 부분을 눈여겨보면 좋고, 미역국 한 그릇이나 밥에 검은콩을 섞어 먹는 것처럼 짠맛 나는 음식이나 검은색 식품을 일상 습관으로 참고해볼 만해.' }
-        ]
+      var RHYTHM_LACKING = {
+        '목': { en: 'With little Wood in your chart, getting started may take a little longer than you expect.', ko: '원국에 목 기운이 적으면, 시작하는 데 생각보다 시간이 조금 더 걸릴 수 있어.' },
+        '화': { en: 'With little Fire in your chart, you may warm up slowly in the morning.', ko: '원국에 화 기운이 적으면, 아침에 천천히 시동이 걸리는 편일 수 있어.' },
+        '토': { en: "With little Earth in your chart, your routine may shift around with other people's plans.", ko: '원국에 토 기운이 적으면, 다른 사람 일정에 따라 루틴이 자주 바뀔 수 있어.' },
+        '금': { en: 'With little Metal in your chart, routines may slide when life gets busy.', ko: '원국에 금 기운이 적으면, 바쁠 때 루틴이 쉽게 흐트러질 수 있어.' },
+        '수': { en: 'With little Water in your chart, you may line up busy days back to back without a break.', ko: '원국에 수 기운이 적으면, 바쁜 날을 쉬는 날 없이 연달아 잡기 쉬워.' }
       };
-      var ACTION_EXCESS = {
-        '목': [
-          { en: 'Because Wood energy piles up rather than running thin for you, the useful move is release, not buildup — simple stretching or a short walk helps let tension go before it accumulates, unlike a routine focused on generating more energy.', ko: '너는 목 기운이 부족하기보다 몰려 있는 쪽이라, 필요한 건 에너지를 더 만드는 게 아니라 풀어주는 거야. 가벼운 스트레칭이나 산책으로 미리 긴장을 풀어주면 좋아.' },
-          { en: 'This works especially well as a short, frequent habit — a two-minute stretch between tasks — rather than one long session saved for the end of the day, by which point the tension has already piled up.', ko: '이건 하루 끝에 몰아서 한 번 길게 하기보다, 일과 사이사이 짧게 자주 해주는 습관으로 특히 잘 통해. 하루 끝엔 이미 긴장이 다 쌓인 뒤니까.' },
-          { en: 'In practice, that can be as simple as standing up and rolling your shoulders every hour during a desk-heavy day, or taking a ten-minute walk around the block right after a tense phone call instead of sitting with it.', ko: '실제로는 책상에 오래 앉아있는 날엔 한 시간마다 일어나서 어깨를 돌려주거나, 긴장되는 통화 직후엔 그냥 앉아있지 말고 동네를 10분 걸어보는 식으로 하면 돼.' }
-        ],
-        '화': [
-          { en: 'Because heat tends to rise upward for you rather than running cold, the useful move is cooling and settling, not warming up further — a few minutes of quiet or meditation goes a long way toward cooling that rising heat.', ko: '너는 열이 차갑기보다 위로 몰리는 쪽이라, 필요한 건 더 데우는 게 아니라 식히고 가라앉히는 거야. 잠깐이라도 조용히 쉬는 시간이 위로 몰리는 열을 가라앉히는 데 도움이 돼.' },
-          { en: 'This works especially well earlier in the day, before the heat has had a chance to build up fully, rather than only trying to cool down right before bed when it is already peaked.', ko: '이건 열이 완전히 쌓이기 전인 하루 중 이른 시간에 특히 잘 통해. 이미 최고조에 달한 잠들기 직전에만 식히려는 것보다.' },
-          { en: 'In practice, that can mean stepping away from a screen for five quiet minutes mid-afternoon, or splashing cool water on your face and wrists when a headache starts to creep in.', ko: '실제로는 오후 중반에 화면에서 잠깐 벗어나 조용히 5분을 보내거나, 두통이 슬금슬금 올라올 때 얼굴과 손목에 찬물을 끼얹어보는 식으로 하면 돼.' }
-        ],
-        '토': [
-          { en: 'Because things can feel stuck and heavy for you when Earth piles up, the useful move is light circulation, not more stillness — light movement helps keep things from feeling stuck and heavy.', ko: '너는 토 기운이 몰리면 뭔가 정체되고 무거워지는 느낌이 들 수 있어서, 필요한 건 더 가만히 있는 게 아니라 가볍게 순환시키는 거야. 가벼운 운동으로 정체된 기운을 순환시켜주면 좋아.' },
-          { en: 'This works especially well right after a meal — a short walk instead of sitting straight back down — rather than saving movement for a separate workout session hours later.', ko: '이건 식사 직후에 바로 앉지 않고 짧게 걷는 것처럼 특히 잘 통해. 몇 시간 뒤 따로 운동 시간을 잡는 것보다.' },
-          { en: 'In practice, that can mean a ten-minute walk after dinner instead of heading straight to the couch, or standing up and stretching once an hour if your day is mostly seated.', ko: '실제로는 저녁 먹고 바로 소파로 가는 대신 10분 정도 걷거나, 앉아있는 시간이 많은 날엔 한 시간마다 일어나 스트레칭하는 식으로 하면 돼.' }
-        ],
-        '금': [
-          { en: 'Because stiffness settles in easily for you when Metal piles up, the useful move is regular loosening, not more rigidity — stretching out the joints and muscles regularly keeps that stiffness from settling in.', ko: '너는 금 기운이 몰리면 뻣뻣함이 쉽게 자리 잡을 수 있어서, 필요한 건 더 굳히는 게 아니라 정기적으로 풀어주는 거야. 관절이나 근육을 자주 스트레칭해주면 뻣뻣해지는 걸 막을 수 있어.' },
-          { en: 'This works especially well as a short daily habit rather than an occasional long session — a little stretching often does more for you than a lot of stretching rarely.', ko: '이건 가끔 길게 하는 것보다 짧게 매일 하는 습관으로 특히 잘 통해. 조금씩 자주 하는 게 가끔 많이 하는 것보다 너한텐 더 효과적이야.' },
-          { en: 'In practice, that can mean a two-minute stretch right after waking up, before the body has a chance to stay stiff through the morning, or keeping a moisturizer by the sink for a quick habit after washing your face.', ko: '실제로는 아침에 일어나자마자 2분 정도 스트레칭을 하거나, 세수 후 바로 로션을 바르는 습관을 세면대 옆에 챙겨두는 식으로 하면 돼.' }
-        ],
-        '수': [
-          { en: 'Because swelling and chill are the pattern for you when Water piles up, the useful move is moderation in the evening, not indulgence — watching late nights and heavy drinking keeps the swelling and chill in check.', ko: '너는 수 기운이 몰리면 붓기와 냉기가 패턴으로 나타날 수 있어서, 필요한 건 저녁에 과하게 즐기는 게 아니라 절제하는 거야. 늦은 밤이나 과음을 조심하면 붓기와 냉기를 줄일 수 있어.' },
-          { en: 'This works especially well as an evening-specific rule — cutting off salty food and alcohol a few hours before bed — rather than a general all-day restriction that is harder to actually stick to.', ko: '이건 자기 몇 시간 전부터 짠 음식이나 술을 끊는 것처럼 저녁에 한정된 규칙으로 특히 잘 통해. 하루 종일 제한하려는 것보다 실제로 지키기 쉬워.' },
-          { en: 'In practice, that can mean swapping a late-night salty snack for something lighter, or noticing your ankles the next morning as a quick, honest check on how the night before actually went.', ko: '실제로는 늦은 밤 짠 야식을 더 가벼운 걸로 바꾸거나, 다음 날 아침 발목 상태를 보고 전날 밤이 어땠는지 솔직하게 체크해보는 식으로 하면 돼.' }
-        ]
+      var IDEA_EXCESS = {
+        '목': { en: 'Idea: put two or three short pauses into the day on purpose, the same way you schedule meetings.', ko: '아이디어: 회의를 잡듯이 하루에 짧은 쉼을 두세 번 일부러 넣어 봐.' },
+        '화': { en: 'Idea: take five quiet minutes between back-to-back tasks before moving on.', ko: '아이디어: 연달아 있는 일 사이에 5분쯤 조용히 쉬고 넘어가 봐.' },
+        '토': { en: 'Idea: stand up and take a short walk after meals as a simple reset.', ko: '아이디어: 식사 뒤에 일어나서 짧게 걷는 걸 간단한 쉼표로 삼아 봐.' },
+        '금': { en: 'Idea: leave a little slack in your routine so one change does not throw off the whole day.', ko: '아이디어: 루틴에 여유를 조금 남겨 두면 한 가지가 바뀌어도 하루 전체가 흔들리지 않아.' },
+        '수': { en: 'Idea: set a bedtime reminder the same way you set a wake-up alarm.', ko: '아이디어: 기상 알람처럼 잠자리 알람도 맞춰 봐.' }
       };
-      var ACTION_LACKING = {
-        '목': [
-          { en: 'Because momentum builds slowly for you rather than piling up on its own, the useful move is starting small, not waiting for motivation — starting with even five minutes of movement builds momentum better than waiting to feel ready.', ko: '너는 추진력이 저절로 쌓이기보다 천천히 붙는 편이라, 필요한 건 의욕을 기다리는 게 아니라 작게라도 시작하는 거야. 거창하게 시작하기보다 5분이라도 몸을 움직이는 것부터 시작하면 추진력이 붙어.' },
-          { en: "This works especially well when the bar for 'starting' is genuinely low — putting on your shoes counts, walking to the end of the block counts — rather than requiring a full workout to feel like it counted.", ko: "이건 '시작'의 기준을 진짜로 낮게 잡을 때 특히 잘 통해. 운동화만 신어도, 동네 끝까지만 걸어도 시작한 걸로 치는 식으로. 제대로 된 운동을 다 해야만 인정되는 것보다." },
-          { en: 'In practice, that can mean keeping running shoes by the door as a visual reminder, or committing to just the first five minutes of a workout video and letting yourself stop there if you want.', ko: '실제로는 운동화를 현관에 잘 보이게 놔두거나, 운동 영상을 딱 5분만 보겠다고 정하고 원하면 거기서 멈춰도 되는 식으로 하면 돼.' }
-        ],
-        '화': [
-          { en: 'Because circulation runs a little cold for you rather than overheated, the useful move is warming and settling in, not cooling down further — keeping hands, feet, and core genuinely warm supports circulation more than it seems.', ko: '너는 순환이 과열되기보다 차가운 쪽이라, 필요한 건 더 식히는 게 아니라 데워주는 거야. 손발과 몸을 따뜻하게 유지하는 것만으로도 순환에 꽤 도움이 돼.' },
-          { en: 'This works especially well as a preventive habit — layering up before you actually feel cold — rather than reacting only once your hands are already numb.', ko: '이건 실제로 춥다고 느끼기 전에 미리 챙겨 입는 예방 습관으로 특히 잘 통해. 손이 이미 얼어붙고 나서야 반응하는 것보다.' },
-          { en: 'In practice, that can mean keeping a warm drink nearby through the day, or slipping on an extra layer of socks the moment a room feels even slightly chilly.', ko: '실제로는 하루 종일 따뜻한 음료를 곁에 두거나, 방이 조금이라도 서늘하게 느껴지면 바로 양말을 한 겹 더 신는 식으로 하면 돼.' }
-        ],
-        '토': [
-          { en: 'Because digestion is easily thrown off for you rather than sturdy, the useful move is consistency, not variety — eating at consistent times protects a digestive system that is easily thrown off.', ko: '너는 소화기관이 튼튼하기보다 쉽게 흔들리는 쪽이라, 필요한 건 다양함이 아니라 일관성이야. 규칙적인 시간에 식사하는 습관이 예민한 소화기관을 지켜줘.' },
-          { en: 'This works especially well as a simple, repeatable meal structure — a similar breakfast most days — rather than constantly experimenting with new foods or skipping meals when busy.', ko: '이건 매일 비슷한 아침 식사처럼 단순하고 반복 가능한 식사 구조로 특히 잘 통해. 바쁘다고 끼니를 거르거나 계속 새로운 음식을 시도하는 것보다.' },
-          { en: 'In practice, that can mean eating breakfast within the same half-hour window most mornings, or keeping a simple go-to meal on hand for days that feel too busy to think about food.', ko: '실제로는 아침을 거의 매일 비슷한 시간대에 먹거나, 뭘 먹을지 생각할 여유도 없이 바쁜 날을 위해 간단한 단골 메뉴를 정해두는 식으로 하면 돼.' }
-        ],
-        '금': [
-          { en: 'Because the respiratory system recovers slowly for you rather than bouncing back fast, the useful move is prevention, not just treatment after the fact — a humid environment and enough rest help the respiratory system recover faster.', ko: '너는 호흡기 회복이 빠르기보다 느린 편이라, 필요한 건 이미 안 좋아진 뒤 대처하는 게 아니라 미리 예방하는 거야. 건조하지 않은 환경과 충분한 휴식이 호흡기 회복을 도와줘.' },
-          { en: 'This works especially well as a background habit you maintain year-round — a humidifier running through dry seasons — rather than only reaching for it once things already feel off.', ko: '이건 건조한 계절 내내 가습기를 틀어두는 것처럼 일년 내내 유지하는 배경 습관으로 특히 잘 통해. 이미 뭔가 안 좋아지고 나서야 찾는 것보다.' },
-          { en: 'In practice, that can mean running a humidifier in your bedroom through the dry months, or genuinely going to bed earlier for a few nights when you notice you are more tired than usual.', ko: '실제로는 건조한 계절엔 방에 가습기를 틀어두거나, 평소보다 유독 피곤하다 싶을 땐 며칠이라도 진짜 일찍 자보는 식으로 하면 돼.' }
-        ],
-        '수': [
-          { en: 'Because bounce-back takes longer for you rather than happening overnight, the useful move is protecting sleep in advance, not catching up after the fact — real, sufficient sleep matters more for you than it does for most people.', ko: '너는 회복이 하룻밤 새 되기보다 더 오래 걸리는 편이라, 필요한 건 나중에 몰아서 자는 게 아니라 미리 수면을 지키는 거야. 남들보다 충분한 수면이 특히 중요해.' },
-          { en: "This works especially well as a protected, non-negotiable bedtime rather than something that slides whenever the day runs long — treating sleep like a fixed appointment rather than whatever's left over.", ko: '이건 하루가 길어지면 미뤄지는 게 아니라, 정해둔 취침 시간을 따로 지키는 것으로 특히 잘 통해. 잠을 남는 시간으로 취급하기보다 고정된 약속처럼 대하는 거야.' },
-          { en: 'In practice, that can mean setting an alarm for bedtime the same way you set one for waking up, or noticing which single late night tends to cost you two or three rough days afterward.', ko: '실제로는 기상 알람뿐 아니라 취침 알람도 맞춰두거나, 하루 밤샘이 그 뒤 이틀 사흘의 컨디션을 갉아먹는다는 걸 스스로 눈여겨보는 식으로 하면 돼.' }
-        ]
+      var IDEA_LACKING = {
+        '목': { en: 'Idea: lower the bar for starting. Five minutes counts.', ko: '아이디어: 시작의 기준을 낮춰 봐. 5분만 해도 시작한 거야.' },
+        '화': { en: 'Idea: give the first hour of the day an easy start before the harder tasks.', ko: '아이디어: 어려운 일 전에 하루의 첫 한 시간을 가볍게 시작해 봐.' },
+        '토': { en: 'Idea: anchor one or two fixed times in the day, such as breakfast or a short walk.', ko: '아이디어: 아침 식사나 짧은 산책처럼 하루에 고정된 시간을 한두 개 정해 봐.' },
+        '금': { en: 'Idea: keep one small daily habit that stays the same on busy days too.', ko: '아이디어: 바쁜 날에도 그대로 지키는 작은 하루 습관 하나를 정해 봐.' },
+        '수': { en: 'Idea: plan a lighter day after a demanding one.', ko: '아이디어: 힘든 날 다음에는 가벼운 날을 미리 잡아 둬.' }
       };
 
       var overview = [];
+      overview.push({ en: 'This section looks at the pace and rhythm of your days: when you tend to speed up, slow down and settle into a routine. It is a for-fun note on daily habits, not medical advice.', ko: '이 칸은 하루의 속도와 리듬을 봐. 언제 빨라지고 느려지고 루틴에 자리 잡는지에 대한 재미용 생활 습관 메모이지, 의학적 조언이 아니야.' });
       if (!ctx.strengthInfo.lacking.length && !ctx.strengthInfo.excess.length) {
-        overview.push({ en: 'Some charts have one or two elements piling up or running thin, creating an obvious pattern to manage. Yours does not — your five elements are spread out fairly evenly, so overall condition tends to stay steady without a single obvious weak point.', ko: '어떤 원국은 특정 오행이 몰리거나 부족해서 뚜렷하게 관리해야 할 패턴이 생겨. 너는 그렇지 않아. 오행이 고르게 퍼져 있어서, 뚜렷한 약점 없이 전반적으로 컨디션이 안정적인 편이야.' });
-        overview.push({ en: 'This tendency fits a fairly standard, moderate routine well — regular meals, regular sleep, regular movement — without needing to specifically compensate for any one weak spot.', ko: '이런 성향은 특정 약점을 따로 보완할 필요 없이, 규칙적인 식사와 수면, 적당한 운동 같은 비교적 평범하고 균형 잡힌 생활습관과 잘 맞아.' });
-        overview.push({ en: 'In everyday terms, it can look like your body handling the occasional late night or skipped meal without much fuss, bouncing back within a day or two instead of throwing off a whole week.', ko: '일상에서는 가끔 늦게 자거나 끼니를 걸러도 몸이 크게 무너지지 않고, 한 주 전체가 흔들리기보다 하루 이틀이면 회복되는 식으로 나타날 수 있어.' });
+        overview.push({ en: 'Your five elements are spread fairly evenly, so no single rhythm stands out. A plain, regular routine is a natural fit.', ko: '오행이 고르게 퍼져 있어서 두드러지는 리듬이 없어. 평범하고 규칙적인 루틴이 자연스럽게 맞아.' });
       } else {
-        overview.push({ en: 'Some charts spread their five elements evenly, with no single element demanding extra attention. Yours does not — your elements are not evenly spread, and that shows up as a specific, recognizable pattern in how your body tends to run.', ko: '어떤 원국은 오행이 고르게 퍼져 있어서 특별히 신경 쓸 부분이 없어. 너는 그렇지 않아. 오행이 고르게 퍼져있지 않아서, 몸 컨디션에도 특정한 패턴이 나타나는 편이야.' });
-        overview.push({ en: 'This tendency fits a routine built around your specific pattern — leaning into the habits below rather than a generic one-size-fits-all wellness routine that ignores where your body actually needs the attention.', ko: '이런 성향은 네 특정 패턴에 맞춰 짠 생활습관과 잘 맞아. 아래 나오는 습관들에 좀 더 신경 쓰는 편이, 어디에 신경 써야 하는지 무시하는 만능 웰빙 루틴보다 나아.' });
-        overview.push({ en: 'In everyday terms, it can look like the same late night or skipped meal hitting you noticeably harder than it seems to hit people around you, in a fairly consistent, predictable direction.', ko: '일상에서는 같은 밤샘이나 끼니를 걸러도 주변 사람들보다 유독 더 크게 티가 나는데, 그게 꽤 일관되고 예측 가능한 방향으로 나타나는 식으로 볼 수 있어.' });
+        overview.push({ en: 'Your elements are not evenly spread, so a few rhythm patterns may stand out. The notes below are ideas to try, not rules.', ko: '오행이 고르게 퍼져 있지 않아서 몇 가지 리듬 패턴이 눈에 띌 수 있어. 아래 내용은 해 볼 만한 아이디어지 규칙이 아니야.' });
       }
 
       var point = [];
-      ctx.strengthInfo.excess.forEach(function (el) { if (EXCESS[el]) point = point.concat(EXCESS[el]); });
-      ctx.strengthInfo.lacking.forEach(function (el) { if (LACKING[el]) point = point.concat(LACKING[el]); });
+      ctx.strengthInfo.excess.forEach(function (el) { if (RHYTHM_EXCESS[el]) point.push(RHYTHM_EXCESS[el]); });
+      ctx.strengthInfo.lacking.forEach(function (el) { if (RHYTHM_LACKING[el]) point.push(RHYTHM_LACKING[el]); });
       if (!point.length) {
-        point.push({ en: 'There is no single element dragging the rest down or piling up too much.', ko: '유독 몰리거나 부족한 오행 없이 무난한 편이야.' });
+        point.push({ en: 'No single element piles up or runs thin, so your pace may stay fairly even from day to day.', ko: '유독 몰리거나 부족한 오행이 없어서 하루하루 속도가 비교적 고른 편일 수 있어.' });
       }
 
       var boost = [];
-      ctx.strengthInfo.excess.forEach(function (el) { if (ACTION_EXCESS[el]) boost = boost.concat(ACTION_EXCESS[el]); });
-      ctx.strengthInfo.lacking.forEach(function (el) { if (ACTION_LACKING[el]) boost = boost.concat(ACTION_LACKING[el]); });
+      ctx.strengthInfo.excess.forEach(function (el) { if (IDEA_EXCESS[el]) boost.push(IDEA_EXCESS[el]); });
+      ctx.strengthInfo.lacking.forEach(function (el) { if (IDEA_LACKING[el]) boost.push(IDEA_LACKING[el]); });
       if (!boost.length) {
-        boost.push({ en: 'Whatever routine you already have is working — keeping it consistent is enough.', ko: '지금 컨디션 흐름이 안정적이니, 있는 루틴을 꾸준히 유지하는 것만으로 충분해.' });
+        boost.push({ en: 'Whatever routine you already have seems to suit you. Keeping it steady is enough.', ko: '지금 있는 루틴이 잘 맞는 편이야. 꾸준히 이어 가는 것만으로 충분해.' });
       }
-      boost.push({ en: 'This is a five-elements tendency read, not a medical diagnosis — if something feels genuinely off, a doctor comes first.', ko: '이 내용은 사주 오행 흐름을 참고하는 것이지 의학적 진단이 아니에요. 몸이 정말 이상하면 병원이 먼저예요.' });
+      boost.push({ en: 'This is a daily-habits note, not medical advice. If anything worries you, talk to a doctor or health professional about your health.', ko: '이 내용은 생활 습관 참고용이지 의학적 조언이 아니에요. 걱정되는 점이 있으면 의사와 상담하세요.' });
 
       return sectionHtml('Overview', '총운풀이', overview) +
         sectionHtml('Point', '포인트', point) +
@@ -2196,8 +2089,6 @@
         boost.push({ en: 'This tends to suit organizing a life around relationships, meaning, craft, or wellbeing — better than a life measured primarily by income or job title.', ko: '이런 성향은 관계, 의미, 실력, 웰빙 중심으로 삶을 꾸려가는 것과 잘 맞아. 소득이나 직함으로 주로 판단되는 삶보다.' });
         boost.push({ en: 'In everyday terms, it can look like genuinely not knowing your coworkers\' salaries or titles because it never occurred to you to check, or choosing a lower-paying job that actually leaves you time for what matters more to you.', ko: '일상에서는 동료 연봉이나 직함을 궁금해한 적조차 없거나, 급여는 낮아도 진짜 중요한 걸 위한 시간이 남는 일을 선택하는 식으로 나타날 수 있어.' });
       }
-      var color = luckyColorTip(ctx.strengthInfo.lacking);
-      if (color) boost.push(color);
 
       return sectionHtml('Overview', '총운풀이', overview) +
         sectionHtml('Point', '포인트', point) +
@@ -2308,7 +2199,7 @@
     var box = $('#scw-today');
     if (box) {
       box.__drMinor = minor;
-      var hideKeys = ['Wealth', 'Love', 'Career', 'Health'], hidden = 0;
+      var hideKeys = ['Wealth', 'Love', 'Career', 'Health', 'Daily Rhythm'], hidden = 0;
       Array.prototype.slice.call(box.querySelectorAll('.scw-today-cat')).forEach(function (c) {
         var lab = c.querySelector('.scw-tcl-en'), name = lab ? lab.textContent.trim() : '';
         var hide = minor && hideKeys.indexOf(name) >= 0;
@@ -2316,7 +2207,7 @@
       });
       var tn = document.getElementById('dr-today-minor');
       if (minor && hidden) {
-        if (!tn) { tn = document.createElement('p'); tn.id = 'dr-today-minor'; tn.className = 'dr-reports-minor'; tn.textContent = 'Today’s Fortune for wealth, love, career, and health is for readers 14 and older.'; box.appendChild(tn); }
+        if (!tn) { tn = document.createElement('p'); tn.id = 'dr-today-minor'; tn.className = 'dr-reports-minor'; tn.textContent = 'Today’s Fortune for wealth, love, career, and daily rhythm is for readers 14 and older.'; box.appendChild(tn); }
         else if (tn.parentNode !== box) box.appendChild(tn);
         tn.style.display = '';
       } else if (tn) tn.style.display = 'none';
