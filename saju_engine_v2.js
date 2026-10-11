@@ -2219,6 +2219,7 @@
     if (p && p.res === window.__scwLastRes && window.KDeepUI && $('#scw-result').style.display === 'block') { try { window.KDeepUI.render(p.inp, p.res, { noScroll: true }); } catch (e) { if (window.console) console.error(e); } }
   });
   function scwDateOk(inp) { return inp.calendar === 'lunar' || (inp.day >= 1 && inp.day <= scwDim(inp.year, inp.month)); } // [5차b] 양력만: 음력은 기존 오류 안내
+  function scwFuture(inp) { if (inp.calendar === 'lunar') return false; var n = new Date(), t = n.getFullYear() * 10000 + (n.getMonth() + 1) * 100 + n.getDate(); return inp.year * 10000 + inp.month * 100 + inp.day > t; } // [7차] 오늘 이후 양력 생일은 계산하지 않음
   $('#scw-submit').addEventListener('click', function () {
     $('#scw-error').textContent = '';
     try {
@@ -2228,6 +2229,11 @@
       if (!scwDateOk(inp)) { // [5차b] 달력에 없는 날짜는 계산하지 않음
         if (window.KDeepUI) window.KDeepUI.hide();
         showError('That date doesn\'t exist (for example, February 30). Please choose a day that is in that month.');
+        return;
+      }
+      if (scwFuture(inp)) { // [7차]
+        if (window.KDeepUI) window.KDeepUI.hide();
+        showError('That birth date is in the future. Please check the year, month, and day.');
         return;
       }
       var timeUnknown = inp.timeUnknown;
