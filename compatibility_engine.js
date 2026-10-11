@@ -38,6 +38,8 @@
     '己': '기', '庚': '경', '辛': '신', '壬': '임', '癸': '계'
   };
   var ELEMENT_KO = { '목': '목(木)', '화': '화(火)', '토': '토(土)', '금': '금(金)', '수': '수(水)' };
+  var ZHI_EN = { '子': 'Rat', '丑': 'Ox', '寅': 'Tiger', '卯': 'Rabbit', '辰': 'Dragon', '巳': 'Snake', '午': 'Horse', '未': 'Goat', '申': 'Monkey', '酉': 'Rooster', '戌': 'Dog', '亥': 'Pig' }; // [보정 1753] 영어 화면 한자 0
+  var GAN_EN = { '甲': 'Oak (bolder Wood)', '乙': 'Ivy (gentler Wood)', '丙': 'Sunshine (bolder Fire)', '丁': 'Firefly (gentler Fire)', '戊': 'Rock (bolder Earth)', '己': 'Meadow (gentler Earth)', '庚': 'Blade (bolder Metal)', '辛': 'Gem (gentler Metal)', '壬': 'Ocean (bolder Water)', '癸': 'Rain (gentler Water)' };
   var ELEMENT_EN = { '목': 'Wood', '화': 'Fire', '토': 'Earth', '금': 'Metal', '수': 'Water' };
 
   // 오행 상생/상극 (saju_engine.js GENERATES/CONTROLS와 동일)
@@ -314,16 +316,16 @@
   // ---- (basis) 라인 영문판 — "(basis)" 자동 계산 근거 텍스트도 LANG=en일 때 한글이 섞이지 않도록 ----
   function zhiHapBasisEn(zhiHap) {
     if (!zhiHap.matched) {
-      return 'Day Branches ' + zhiHap.aZhi + ' · ' + zhiHap.bZhi + ' — no Six Harmony';
+      return 'Day Branches ' + ZHI_EN[zhiHap.aZhi] + ' · ' + ZHI_EN[zhiHap.bZhi] + ' — no Six Harmony';
     }
     var tail = zhiHap.noTransform
       ? ' → reinforces ' + ELEMENT_EN[zhiHap.resultElement] + ' energy without transformation'
       : ' → ' + ELEMENT_EN[zhiHap.resultElement] + ' energy';
-    return 'Day Branches ' + zhiHap.aZhi + '+' + zhiHap.bZhi + ' Six Harmony' + tail;
+    return 'Day Branches ' + ZHI_EN[zhiHap.aZhi] + ' + ' + ZHI_EN[zhiHap.bZhi] + ' Six Harmony' + tail;
   }
   function dayStemBasisEn(dayStem) {
     var relLabel = dayStem.relation === 'sangsaeng' ? 'Generating' : dayStem.relation === 'sanggeuk' ? 'Controlling' : 'Same Element (Companion)';
-    return 'Day Master ' + dayStem.aGanHanja + ' (' + ELEMENT_EN[dayStem.aElement] + ') · ' + dayStem.bGanHanja + ' (' + ELEMENT_EN[dayStem.bElement] + ') — ' + relLabel + ' relationship';
+    return 'Day Master ' + GAN_EN[dayStem.aGanHanja] + ' · ' + GAN_EN[dayStem.bGanHanja] + ' — ' + relLabel + ' relationship';
   }
   function balanceBasisEn(balance) {
     if (!balance.aLacking.length && !balance.bLacking.length) {
