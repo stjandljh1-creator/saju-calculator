@@ -116,7 +116,7 @@
     pyeonin: [['a year for unusual ideas and learning on your own', '남다른 생각과 혼자 하는 공부의 해'], ['a year when a quiet hobby or side study may pull you in', '조용한 취미나 따로 하는 공부에 끌릴 수 있는 해']],
     jeongin: [['a year when learning something new may come more easily', '새로 배우는 일이 더 쉽게 느껴질 수 있는 해'], ['a year when good advice may find you at the right time', '좋은 조언이 때맞춰 찾아올 수 있는 해']]
   };
-  var GOD_NAME = { bigyeon: ['Peer', '비견'], geopjae: ['Rival', '겁재'], siksin: ['Ease', '식신'], sanggwan: ['Rebel', '상관'], pyeonjae: ['Hustle', '편재'], jeongjae: ['Wage', '정재'], pyeongwan: ['Pressure', '편관'], jeonggwan: ['Duty', '정관'], pyeonin: ['Insight', '편인'], jeongin: ['Nurture', '정인'] };
+  var GOD_NAME = { bigyeon: ['Peer', '비견'], geopjae: ['Rival', '겁재'], siksin: ['Ease', '식신'], sanggwan: ['Rebel', '상관'], pyeonjae: ['Hustle', '편재'], jeongjae: ['Wage', '정재'], pyeongwan: ['Challenge', '편관'], jeonggwan: ['Duty', '정관'], pyeonin: ['Insight', '편인'], jeongin: ['Nurture', '정인'] };
   var EL_NAME = { wood: ['Wood', '나무'], fire: ['Fire', '불'], earth: ['Earth', '흙'], metal: ['Metal', '쇠'], water: ['Water', '물'] };
   var DM_KO = { 甲: '갑목', 乙: '을목', 丙: '병화', 丁: '정화', 戊: '무토', 己: '기토', 庚: '경금', 辛: '신금', 壬: '임수', 癸: '계수' };
   var PILLAR_EN = { year: 'year', month: 'month', day: 'day', hour: 'hour' };

@@ -185,7 +185,7 @@
     ai: ['Illustrations and icons on this page were made with AI tools.', '이 페이지의 그림과 아이콘은 AI 도구로 만들었어요.'],
     crisisHead: ['You’re not alone, and help is available right now. If you’re thinking about harming yourself, or things feel too heavy:', '혼자가 아닙니다. 지금 도움을 받을 수 있습니다. 스스로를 해치고 싶은 생각이 들거나 너무 힘들다면:'],
     crisis: [
-      ['In the United States, call or text <a href="tel:988"><b>988</b></a> to reach the <a href="https://988lifeline.org/" target="_blank" rel="noopener">988 Suicide &amp; Crisis Lifeline</a>. It’s free and available 24/7, and you can text if talking is hard.', '미국에서는 988로 전화하거나 문자를 보내면 988 자살·위기 상담 전화에 연결됩니다. 무료이며 24시간 운영하고, 말하기 어려우면 문자로도 됩니다.'],
+      ['In the United States, call or text <a href="tel:988"><b>988</b></a> to reach the <a href="https://988lifeline.org/" target="_blank" rel="noopener">988 Lifeline</a>, a free line for anyone in emotional distress or crisis. It’s available 24/7, and you can text if talking is hard.', '미국에서는 988로 전화하거나 문자를 보내면 988 위기 상담 전화(988 Lifeline)에 연결됩니다. 마음이 너무 힘들거나 위기에 있는 누구나 쓸 수 있고, 무료이며 24시간 운영합니다. 말하기 어려우면 문자로도 됩니다.'],
       ['If you or someone else is in immediate danger, call <a href="tel:911"><b>911</b></a> in the United States. Outside the US, contact your local emergency number.', '본인이나 다른 사람이 당장 위험하면 미국에서는 911에 전화하세요. 미국 밖에서는 그 나라의 응급 전화번호로 연락하세요.'],
       ['In other countries, you can find local helplines at <a href="https://findahelpline.com/" target="_blank" rel="noopener">findahelpline.com</a>.', '다른 나라에서는 findahelpline.com 에서 그 나라의 상담 전화를 찾을 수 있습니다.']
     ]
@@ -289,7 +289,7 @@
       var menu = document.getElementById('scw-category-menu'), help = document.getElementById('dr-reports-help');
       if (menu && !help) {
         help = document.createElement('p'); help.id = 'dr-reports-help'; help.className = 'dr-reports-help';
-        help.innerHTML = 'These reports are for entertainment only, not financial, medical, or legal advice. Need support right now? In the US, call or text <a href="tel:988"><b>988</b></a>. Elsewhere, find a local helpline at <a href="https://findahelpline.com/" target="_blank" rel="noopener">findahelpline.com</a>.';
+        help.innerHTML = '<span style="display:block">These reports are for entertainment only, not financial, medical, or legal advice.</span><span style="display:block;margin-top:6px">If you’re having thoughts of harming yourself or ending your life, or things feel too heavy right now, call or text <a href="tel:988"><b>988</b></a> in the US (free, 24/7). If you’re in immediate danger, call <a href="tel:911"><b>911</b></a> in the US or your local emergency number. Elsewhere, find a local helpline at <a href="https://findahelpline.com/" target="_blank" rel="noopener">findahelpline.com</a>.</span>';
         menu.appendChild(help);
       }
       if (help) help.style.display = ch.minor ? 'none' : '';

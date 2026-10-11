@@ -359,7 +359,7 @@ const WHY_PLAIN = [
   [/wealth and authority symbols/g, 'the money and responsibility signals'],
   [/wealth symbols/g, 'money signals'], [/authority symbols/g, 'responsibility signals'],
   [/peer symbols/g, 'independence signals'], [/expression symbols/g, 'self-expression signals'], [/nurture symbols/g, 'learning-and-support signals'],
-  [/lean Wage/g, 'lean toward steady effort'], [/lean Hustle/g, 'lean toward opportunities'], [/lean Duty/g, 'lean toward steady responsibility'], [/lean Pressure/g, 'lean toward challenges'],
+  [/lean Wage/g, 'lean toward steady effort'], [/lean Hustle/g, 'lean toward opportunities'], [/lean Duty/g, 'lean toward steady responsibility'], [/lean Pressure/g, 'lean toward challenges'], [/lean Challenge/g, 'lean toward challenges'],
   [/visible characters/g, 'characters showing in your chart'],
   [/your strength check:/g, 'our strength check:'],
   [/Strong self-energy/g, 'plenty of your own energy'], [/Leans on support/g, 'thrives with support'], [/Balanced \(our middle range\)/g, 'evenly balanced'],
@@ -842,7 +842,7 @@ function timelineTable(tl, ch) {
 function toMarkdown(r, title) {
   const ch = r.chart, i = r.input;
   let md = `# ${title}\n\n`;
-  md += `**Input · 입력**: ${i.y}-${String(i.m).padStart(2, '0')}-${String(i.d).padStart(2, '0')} ${i.timeUnknown ? 'birth time unknown · 시간 모름' : String(i.h).padStart(2, '0') + ':' + String(i.mi || 0).padStart(2, '0') + ' (Korea time · 한국시각)'} · Luck-cycle direction · 대운 방향: ${{ male: 'Traditional male chart', female: 'Traditional female chart', notsure: 'Not sure, show both' }[i.dir]} · Reference date · 기준일: ${i.asOf}\n\n`;
+  md += `**Input · 입력**: ${i.y}-${String(i.m).padStart(2, '0')}-${String(i.d).padStart(2, '0')} ${i.timeUnknown ? 'birth time unknown · 시간 모름' : String(i.h).padStart(2, '0') + ':' + String(i.mi || 0).padStart(2, '0') + ' (Korea time · 한국시각)'} · Male / Female · 성별: ${{ male: 'Male · 남', female: 'Female · 여', notsure: 'Not sure, show both' }[i.dir]} · Reference date · 기준일: ${i.asOf}\n\n`;
   md += `| | Hour · 시주 | Day · 일주 | Month · 월주 | Year · 연주 |\n|---|---|---|---|---|\n| Pillar · 기둥 | ${ch.pillars.hour || '? (unknown · 모름)'} | ${ch.pillars.day} | ${ch.pillars.month} | ${ch.pillars.year} |\n\n`;
   md += `Day Master · 일간: ${L.dm[ch.dayGan].en} · Strength · 강약: ${STR[ch.strength].label} · Season · 계절: ${ch.season} · Elements on the visible characters · 보이는 글자 오행 (Wood/Fire/Earth/Metal/Water): ${ORDER_EL.map(e => ch.counts[e]).join('/')} of ${ch.total} · Age · 만 나이: ${ch.age}\n\n`;
   md += `**Key terms · 용어 풀이**\n\n` + r.header.map(pair).join('\n') + '\n---\n\n';
