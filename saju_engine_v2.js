@@ -1991,7 +1991,7 @@
       };
 
       var overview = [];
-      overview.push({ en: 'This section looks at the pace and rhythm of your days: when you tend to speed up, slow down and settle into a routine. It is a for-fun note on daily habits, not medical advice.', ko: '이 칸은 하루의 속도와 리듬을 봐. 언제 빨라지고 느려지고 루틴에 자리 잡는지에 대한 재미용 생활 습관 메모이지, 의학적 조언이 아니야.' });
+      overview.push({ en: 'This section looks at the pace and rhythm of your days: when you tend to speed up, slow down and settle into a routine. It is a reference note on daily habits, not medical advice.', ko: '이 칸은 하루의 속도와 리듬을 봐. 언제 빨라지고 느려지고 루틴에 자리 잡는지에 대한 재미용 생활 습관 메모이지, 의학적 조언이 아니야.' });
       if (!ctx.strengthInfo.lacking.length && !ctx.strengthInfo.excess.length) {
         overview.push({ en: 'Your five elements are spread fairly evenly, so no single rhythm stands out. A plain, regular routine is a natural fit.', ko: '오행이 고르게 퍼져 있어서 두드러지는 리듬이 없어. 평범하고 규칙적인 루틴이 자연스럽게 맞아.' });
       } else {

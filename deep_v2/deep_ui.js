@@ -289,7 +289,7 @@
       var menu = document.getElementById('scw-category-menu'), help = document.getElementById('dr-reports-help');
       if (menu && !help) {
         help = document.createElement('p'); help.id = 'dr-reports-help'; help.className = 'dr-reports-help';
-        help.innerHTML = '<span style="display:block">These reports are for entertainment only, not financial, medical, or legal advice.</span><span style="display:block;margin-top:6px">If you’re having thoughts of harming yourself or ending your life, or things feel too heavy right now, call or text <a href="tel:988"><b>988</b></a> in the US (free, 24/7). If you’re in immediate danger, call <a href="tel:911"><b>911</b></a> in the US or your local emergency number. Elsewhere, find a local helpline at <a href="https://findahelpline.com/" target="_blank" rel="noopener">findahelpline.com</a>.</span>';
+        help.innerHTML = '<span style="display:block">These reports are a reference point only, not financial, medical, or legal advice.</span><span style="display:block;margin-top:6px">If you’re having thoughts of harming yourself or ending your life, or things feel too heavy right now, call or text <a href="tel:988"><b>988</b></a> in the US (free, 24/7). If you’re in immediate danger, call <a href="tel:911"><b>911</b></a> in the US or your local emergency number. Elsewhere, find a local helpline at <a href="https://findahelpline.com/" target="_blank" rel="noopener">findahelpline.com</a>.</span>';
         menu.appendChild(help);
       }
       if (help) help.style.display = ch.minor ? 'none' : '';
