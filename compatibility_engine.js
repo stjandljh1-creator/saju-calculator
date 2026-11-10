@@ -346,7 +346,56 @@
     return compatTextsPromise;
   }
 
+
+  var EL_MEAN = { '목': 'starting things', '화': 'expression and warmth', '토': 'steadiness and trust', '금': 'clear boundaries', '수': 'going with change' };
+  var HEAD5 = {
+    aFeeds: ["You're probably the one who gives more.", "Your {A} feeds their {B}, so the giving tends to run from you to them. You may be the planner, the fixer.", 'Ask "what do you need this week?" before offering anything.'],
+    bFeeds: ["They're probably the one who gives more.", "Their {B} feeds your {A}, so support tends to flow from them to you. They may be the one who notices first.", "Name one thing they did for you this week, out loud."],
+    aChecks: ["You may be the one who sets the pace.", "Your {A} checks their {B}, so you tend to steer and they tend to adjust. That pull can sharpen you both when it's done gently.", "Before you correct something this week, ask how they'd do it first."],
+    bChecks: ["They may be the one who sets the pace.", "Their {B} checks your {A}, so they tend to steer and you tend to adjust. That pull can sharpen you both when it feels fair.", "Say one thing this week that you'd like to decide yourself."],
+    same: ["You two see the world from the same side.", "You share the same element, {A}, so you understand each other quickly. You may also share the same blind spots.", "Before one shared decision this week, ask for a third person's view."]
+  };
+  function headKey(ds) {
+    var a = ds.aElement, b = ds.bElement;
+    if (a === b) return 'same';
+    if (GENERATES[a] === b) return 'aFeeds';
+    if (GENERATES[b] === a) return 'bFeeds';
+    if (CONTROLS[a] === b) return 'aChecks';
+    return 'bChecks';
+  }
+  function checkHtml(ok, title, body, basis) {
+    return '<div class="kc-check"><div class="kc-check-t"><span class="kc-mark" aria-hidden="true">' + (ok ? '✓' : '!') + '</span>' + title + '</div>' +
+      '<p class="kc-check-b">' + body + '</p>' +
+      '<details class="kc-why"><summary>Why we say this</summary><p>' + basis + '</p></details></div>';
+  }
+  function renderReportEnV2(result, relType, texts) {
+    var ds = result.reasons.dayStem, bal = result.reasons.balance, zh = result.reasons.zhiHap;
+    var h = HEAD5[headKey(ds)], A = ELEMENT_EN[ds.aElement], B = ELEMENT_EN[ds.bElement];
+    var REL = { lover: 'Romantic partners', friend: 'Friends', business: 'Business partners' };
+    var VERB = { aFeeds: 'feeds', bFeeds: 'is fed by', aChecks: 'checks', bChecks: 'is checked by', same: 'shares an element with' }[headKey(ds)];
+    var html = '<div class="kc-head"><p class="kc-kicker">' + (REL[relType] || 'Your pair') + ' · your reading</p><p class="kc-head-1">' + h[0] + '</p><p class="kc-head-2">' + h[1].replace(/\{A\}/g, A).replace(/\{B\}/g, B) + '</p>' +
+      '<p class="kc-pair"><span class="kc-el">' + GAN_EN[ds.aGanHanja] + '</span> ' + VERB + ' <span class="kc-el">' + GAN_EN[ds.bGanHanja] + '</span></p>' +
+      '<p class="kc-try"><b>Try this week:</b> ' + h[2] + '</p></div>';
+    var c1;
+    if (ds.relation === 'same') c1 = checkHtml(true, 'You share the same element', 'You both carry ' + A + ', so you tend to read each other quickly.', dayStemBasisEn(ds));
+    else if (ds.relation === 'sangsaeng') c1 = checkHtml(true, 'One of you supports the other', (GENERATES[ds.aElement] === ds.bElement ? A + ' feeds ' + B : B + ' feeds ' + A) + '. This usually shows up as one partner instinctively backing the other\'s growth.', dayStemBasisEn(ds));
+    else c1 = checkHtml(false, 'One of you tends to steer', (CONTROLS[ds.aElement] === ds.bElement ? A + ' checks ' + B : B + ' checks ' + A) + '. That can bring some friction, and it can also sharpen you both.', dayStemBasisEn(ds));
+    var shared = bal.aLacking.filter(function (e) { return bal.bLacking.indexOf(e) !== -1; });
+    var any = bal.aLacking.concat(bal.bLacking.filter(function (e) { return bal.aLacking.indexOf(e) === -1; }));
+    var c2;
+    if (!any.length) c2 = checkHtml(true, 'Neither of you runs short on an element', 'Both charts hold all five elements, so there is little for either of you to fill in.', balanceBasisEn(bal));
+    else if (shared.length) c2 = checkHtml(false, 'You both run short on ' + shared.map(function (e) { return ELEMENT_EN[e]; }).join(' and '), shared.map(function (e) { return ELEMENT_EN[e] + ' is the energy of ' + EL_MEAN[e] + '.'; }).join(' ') + ' With neither of you holding much of it, that side may need a deliberate push from both of you.', balanceBasisEn(bal));
+    else c2 = checkHtml(true, 'You fill in each other\'s gaps', any.map(function (e) { return ELEMENT_EN[e]; }).join(' and ') + ' runs short in one chart and shows up in the other, so one of you can bring what the other lacks.', balanceBasisEn(bal));
+    var c3 = zh.matched
+      ? checkHtml(true, 'Your day branches pair up', texts.liuhe_bonus.en, zhiHapBasisEn(zh))
+      : checkHtml(false, 'Your day branches don\'t pair up', ZHI_EN[zh.aZhi] + ' and ' + ZHI_EN[zh.bZhi] + ' are not one of the Six Harmonies, so the easy day-to-day click may take practice.', zhiHapBasisEn(zh));
+    html += '<div class="kc-checks">' + c1 + c2 + c3 + '</div>';
+    html += '<p class="kc-score"><span class="kc-score-n">' + result.score + ' / 100</span> Three checks added up. The score can\'t see kindness, effort or timing.</p>';
+    html += '<p class="kc-foot">This reading is a reference point from a traditional Korean practice, not a verdict on your relationship. It can\'t replace talking with each other or a qualified counselor.</p>';
+    return html;
+  }
   function renderReport(result, relType, texts) {
+    if (LANG === 'en') return renderReportEnV2(result, relType, texts);
     var overviewText = texts.overview_by_grade[result.grade];
     var summaryLine = {
       en: result.score + ' points, Grade ' + result.grade + ' — ' + overviewText.en,
@@ -402,7 +451,14 @@
     '.saju-calc-widget .scw-compat-person:first-of-type { border-top: none; padding-top: 0; margin-top: 0; }' +
     '.saju-calc-widget .scw-compat-reltype-row select { background: transparent; color: var(--scw-fg); border: 1px solid var(--scw-border); border-radius: 2px; padding: 6px 8px; }' +
     '.saju-calc-widget .scw-compat-score { font-family: Georgia, "Times New Roman", serif; font-size: 2.2em; color: var(--scw-gold); text-align: center; margin-bottom: 4px; }' +
-    '.saju-calc-widget .scw-compat-grade { text-align: center; font-size: .8em; letter-spacing: .12em; text-transform: uppercase; color: var(--scw-muted); margin-bottom: 18px; }';
+    '.saju-calc-widget .scw-compat-grade { text-align: center; font-size: .8em; letter-spacing: .12em; text-transform: uppercase; color: var(--scw-muted); margin-bottom: 18px; }' +
+    '.saju-calc-widget .kc-head{margin:0 0 18px;border:1px solid #6b5630;border-radius:14px;padding:16px}.saju-calc-widget .kc-kicker{margin:0 0 8px;font-size:.78em;letter-spacing:.12em;text-transform:uppercase;color:var(--scw-muted)}.saju-calc-widget .kc-head-1{font-family:Georgia,"Times New Roman",serif;font-size:26px;line-height:1.3;color:var(--scw-gold);margin:0 0 10px}.saju-calc-widget .kc-pair{margin:0 0 10px;font-size:.92em;color:var(--scw-muted)}.saju-calc-widget .kc-el{display:inline-block;border:1px solid #6b5630;border-radius:999px;padding:2px 10px;color:var(--scw-fg)}' +
+    '.saju-calc-widget .kc-head-2{margin:0 0 10px}.saju-calc-widget .kc-try{margin:0;padding:10px 12px;border-left:3px solid var(--scw-gold)}' +
+    '.saju-calc-widget .kc-checks{display:grid;gap:10px;margin:0 0 16px}.saju-calc-widget .kc-check{border:1px solid var(--scw-border);border-radius:8px;padding:12px 14px}' +
+    '.saju-calc-widget .kc-check-t{font-weight:700;display:flex;gap:8px;align-items:baseline}.saju-calc-widget .kc-mark{color:var(--scw-gold);min-width:1em}.saju-calc-widget .kc-check-b{margin:6px 0 4px}' +
+    '.saju-calc-widget .kc-why>summary{cursor:pointer;min-height:44px;display:flex;align-items:center;color:var(--scw-gold)}.saju-calc-widget .kc-why p{margin:0 0 6px;font-size:.92em;color:var(--scw-muted)}' +
+    '.saju-calc-widget .kc-score{font-size:.92em;color:var(--scw-muted);margin:0 0 16px}.saju-calc-widget .kc-score-n{font-family:Georgia,serif;color:var(--scw-gold);margin-right:6px}.saju-calc-widget .kc-foot{font-size:.9em;color:var(--scw-muted);margin:16px 0 0}' +
+    '.saju-calc-widget[data-lang="en"] #scw-compat-score,.saju-calc-widget[data-lang="en"] #scw-compat-grade{display:none}';
   document.head.appendChild(style);
 
   var section = document.createElement('div');
