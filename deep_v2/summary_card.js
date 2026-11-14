@@ -5,7 +5,7 @@
  * v3 (panel 10/3): late-season reading for season-change months (Earth Day Masters keep their own image),
  * Sunshine-only autumn/winter images, no "your main task"-type duties, softer year links ("This year's Horse"),
  * "may" on the decade line, decade line only for ages 14-69 with one direction (others get element counts),
- * year line reads the year's stem and says so, 2027 adds the Sheep's hidden Fire, any year outside 2026-27 is computed. */
+ * year line reads the year's stem and says so, 2027 adds the Goat's hidden Fire, any year outside 2026-27 is computed. */
 (function (root, factory) {
   if (typeof module !== 'undefined' && module.exports) module.exports = factory();
   else root.KSummaryCard = factory();
@@ -101,7 +101,7 @@
     jeongin: [['a wish to understand first and act second', '먼저 이해하고 나서 움직이려는 마음'], ['a soft spot for teachers, books, and good advice', '선생님, 책, 좋은 조언을 아끼는 마음']]
   };
   var MONTH_MINOR = { pyeongwan: [['a gentle side that looks out for friends', '친구를 살뜰히 챙기는 다정한 면']] };
-  var ANIMAL = { 子: ['Rat', '쥐'], 丑: ['Ox', '소'], 寅: ['Tiger', '호랑이'], 卯: ['Rabbit', '토끼'], 辰: ['Dragon', '용'], 巳: ['Snake', '뱀'], 午: ['Horse', '말'], 未: ['Sheep', '양'], 申: ['Monkey', '원숭이'], 酉: ['Rooster', '닭'], 戌: ['Dog', '개'], 亥: ['Pig', '돼지'] };
+  var ANIMAL = { 子: ['Rat', '쥐'], 丑: ['Ox', '소'], 寅: ['Tiger', '호랑이'], 卯: ['Rabbit', '토끼'], 辰: ['Dragon', '용'], 巳: ['Snake', '뱀'], 午: ['Horse', '말'], 未: ['Goat', '양'], 申: ['Monkey', '원숭이'], 酉: ['Rooster', '닭'], 戌: ['Dog', '개'], 亥: ['Pig', '돼지'] };
 
   // ---------- Line 3 (this year): the year's stem read as one of your ten energies (2 variants each) + its strongest link
   var YEAR_GOD = {
@@ -127,7 +127,7 @@
   var AREA_S = { year: ['how you show up in your wider circle', '넓은 관계 속 내 모습'], month: ['daily decisions', '일상의 결정'], day: ['personal choices', '나 스스로 하는 선택'], hour: ['long-range plans', '먼 계획'] };
   var SANHE_EL = { 午: 'fire', 寅: 'fire', 戌: 'fire', 未: 'wood', 亥: 'wood', 卯: 'wood', 子: 'water', 申: 'water', 辰: 'water', 酉: 'metal', 巳: 'metal', 丑: 'metal' };
   var FANG = { 巳: 'summer', 午: 'summer', 未: 'summer', 寅: 'spring', 卯: 'spring', 辰: 'spring', 申: 'autumn', 酉: 'autumn', 戌: 'autumn', 亥: 'winter', 子: 'winter', 丑: 'winter' };
-  var FANG_SET = { spring: ['Tiger, Rabbit, Dragon', '호랑이·토끼·용', 'wood'], summer: ['Snake, Horse, Sheep', '뱀·말·양', 'fire'], autumn: ['Monkey, Rooster, Dog', '원숭이·닭·개', 'metal'], winter: ['Pig, Rat, Ox', '돼지·쥐·소', 'water'] };
+  var FANG_SET = { spring: ['Tiger, Rabbit, Dragon', '호랑이·토끼·용', 'wood'], summer: ['Snake, Horse, Goat', '뱀·말·양', 'fire'], autumn: ['Monkey, Rooster, Dog', '원숭이·닭·개', 'metal'], winter: ['Pig, Rat, Ox', '돼지·쥐·소', 'water'] };
 
   var PSIGN = { year: 'your birth-year animal', month: 'your birth-month animal', day: 'the animal of the day you were born', hour: 'the animal of the hour you were born' };
   var PELM = { year: 'the element of your birth year', month: 'the element of your birth month', day: 'your core element', hour: 'the element of your birth hour' };
@@ -179,6 +179,16 @@
     });
     return out;
   }
+
+
+  // line 4: one small thing to try this week, from the chart's first balancing element (or its scarcest element)
+  var TRY = {
+    wood: ['Start one small thing you’ve been putting off, and give it ten minutes a day.', '미뤄 둔 작은 일 하나를 시작해서 하루 10분씩만 해 보세요.'],
+    fire: ['Tell one person about something you enjoyed lately, in person or in a message.', '요즘 즐거웠던 일 하나를 한 사람에게 직접이나 메시지로 이야기해 보세요.'],
+    earth: ['Pick one fixed time for a meal or a walk, and keep it every day this week.', '식사나 산책 시간 하나를 정해 두고 이번 주 내내 지켜 보세요.'],
+    metal: ['Clear out one drawer, folder, or to-do list, and let one thing go.', '서랍이나 폴더, 할 일 목록 하나를 정리하고 하나는 내려놓아 보세요.'],
+    water: ['Take fifteen quiet minutes without a screen, and write down one thought.', '화면 없이 조용히 15분을 보내고 떠오른 생각 하나를 적어 보세요.']
+  };
 
   /** build(E, R, asOf) -> { title, sub, lines:[{key,label,en,ko}], year } ; E = KDeepEngine, R = E.buildReading(...) */
   function build(E, R, asOf) {
@@ -260,7 +270,15 @@
     }
     var l3 = { key: 'year', label: { en: 'This year', ko: '올해' }, en: head[0] + extra[0] + ' ' + c3[0], ko: head[1] + extra[1] + ' ' + c3[1] };
 
-    var lines = [l1, l2, l3];
+    var hl = (R.helpful && R.helpful.length) ? R.helpful[0] : null, why4;
+    if (hl) why4 = [EL_NAME[hl][0] + ' is a balancing element for your chart, so one way to bring it in this week:', EL_NAME[hl][1] + '은(는) 당신 사주의 균형을 잡아 주는 기운이라, 이번 주에 이렇게 들여 볼 수 있어요.'];
+    else {
+      var cn4 = ch.counts; hl = ['wood', 'fire', 'earth', 'metal', 'water'].reduce(function (a, b) { return cn4[b] < cn4[a] ? b : a; });
+      why4 = [EL_NAME[hl][0] + ' is the scarcest element in your chart, so one way to bring a little in this week:', EL_NAME[hl][1] + '은(는) 당신 사주에 가장 적은 기운이라, 이번 주에 조금 들여 볼 수 있어요.'];
+    }
+    var l4 = { key: 'try', label: { en: 'Try this week', ko: '이번 주 해 볼 일' }, en: why4[0] + ' ' + TRY[hl][0], ko: why4[1] + ' ' + TRY[hl][1] };
+
+    var lines = [l1, l2, l3, l4];
     lines.forEach(function (x) {
       x.ko = josa(x.ko);
       if (minor) { x.en = x.en.replace(/team up with equals/g, 'team up with friends'); x.ko = x.ko.replace(/동등한 사람과 손잡는/g, '친구와 손잡는'); }

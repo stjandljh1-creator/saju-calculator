@@ -703,12 +703,12 @@
     '07~09시 (진시)', '09~11시 (사시)', '11~13시 (오시)', '13~15시 (미시)',
     '15~17시 (신시)', '17~19시 (유시)', '19~21시 (술시)', '21~23시 (해시)'
   ];
-  for (var h = 0; h < 24; h++) {
+  var oh0 = document.createElement('option'); oh0.value = ''; oh0.textContent = LANG === 'en' ? 'Not sure' : '모름(선택 안 함)'; hourSel.appendChild(oh0); for (var h = 0; h < 24; h++) {
     var oh = document.createElement('option'); oh.value = h;
     oh.textContent = LANG === 'en' ? ((h < 10 ? '0' + h : h) + ':00') : ((h < 10 ? '0' + h : h) + '시');
     hourSel.appendChild(oh);
   }
-  hourSel.value = 12;
+  hourSel.value = '';
   yearSel.value = '1990'; monthSel.value = '1'; daySel.value = '1'; // [10/3] 기본 생년월일 1990-1-1
   // [5차b] 달력에 없는 날짜(2월 30일 등) 막기: 일 선택칸을 연·월에 맞게 줄임 (음력은 달 길이가 달라 31칸 그대로, 기존 오류 안내 사용)
   function scwDim(yy, mm) { return new Date(Date.UTC(yy, mm, 0)).getUTCDate(); }
@@ -778,7 +778,7 @@
   // 입력이 바뀔 때마다 "보정 뒤 시각"이 23시대인지 확인해 23시 선택칸을 보이거나 숨김
   function readInput() {
     var caltypeEl = root.querySelector('input[name="scw-caltype"]:checked');
-    var timeUnknown = $('#scw-hour-unknown').checked;
+    var timeUnknown = $('#scw-hour-unknown').checked || hourSel.value === '';
     var dirEl = root.querySelector('input[name="scw-luckdir"]:checked');
     var lzEl = root.querySelector('input[name="scw-latezi"]:checked');
     return {

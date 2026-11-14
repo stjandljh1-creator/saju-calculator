@@ -7,7 +7,7 @@
   'use strict';
   var STEMS = '甲乙丙丁戊己庚辛壬癸', BRANCHES = '子丑寅卯辰巳午未申酉戌亥';
   var NICK = { 甲: 'Oak', 乙: 'Ivy', 丙: 'Sunshine', 丁: 'Firefly', 戊: 'Rock', 己: 'Meadow', 庚: 'Blade', 辛: 'Gem', 壬: 'Ocean', 癸: 'Rain' };
-  var ANIMAL = { 子: 'Rat', 丑: 'Ox', 寅: 'Tiger', 卯: 'Rabbit', 辰: 'Dragon', 巳: 'Snake', 午: 'Horse', 未: 'Sheep', 申: 'Monkey', 酉: 'Rooster', 戌: 'Dog', 亥: 'Pig' };
+  var ANIMAL = { 子: 'Rat', 丑: 'Ox', 寅: 'Tiger', 卯: 'Rabbit', 辰: 'Dragon', 巳: 'Snake', 午: 'Horse', 未: 'Goat', 申: 'Monkey', 酉: 'Rooster', 戌: 'Dog', 亥: 'Pig' };
   var STEM_EL = { 甲: 'Wood', 乙: 'Wood', 丙: 'Fire', 丁: 'Fire', 戊: 'Earth', 己: 'Earth', 庚: 'Metal', 辛: 'Metal', 壬: 'Water', 癸: 'Water' };
   var YANG = { 甲: 1, 乙: 0, 丙: 1, 丁: 0, 戊: 1, 己: 0, 庚: 1, 辛: 0, 壬: 1, 癸: 0 };
   var EL = { 木: 'Wood', 火: 'Fire', 土: 'Earth', 金: 'Metal', 水: 'Water' };
